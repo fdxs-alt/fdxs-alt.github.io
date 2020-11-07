@@ -1,14 +1,20 @@
 import React, { Children } from "react"
 import { ThemeProvider } from "styled-components"
-import { Container } from "../styles/BasicComponents"
+import { Container, Wrapper } from "../styles/BasicComponents"
 import GlobalStyling from "../styles/styled-components/Global"
 import theme from "../styles/styled-components/theme"
+import Nav from "../components/Nav"
 
 const Layout: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyling />
-      <Container>{children}</Container>
+      <Container>
+        <Wrapper>
+          <Nav />
+        </Wrapper>
+        {children}
+      </Container>
     </ThemeProvider>
   )
 }
