@@ -1,9 +1,9 @@
-import React, { Children } from "react"
-import { ThemeProvider } from "styled-components"
-import { Container, Wrapper } from "../styles/BasicComponents"
-import GlobalStyling from "../styles/styled-components/Global"
-import theme from "../styles/styled-components/theme"
-import Nav from "../components/Nav"
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Container, Wrapper } from '../styles/BasicComponents';
+import GlobalStyling from '../styles/styled-components/Global';
+import theme from '../styles/styled-components/theme';
+import Nav from '../components/Nav';
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children }) => {
         {children}
       </Container>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyling = createGlobalStyle`
     ${reset}
@@ -18,5 +18,5 @@ const GlobalStyling = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
 
-`
-export default GlobalStyling
+`;
+export default GlobalStyling;

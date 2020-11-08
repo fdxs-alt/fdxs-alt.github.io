@@ -1,21 +1,27 @@
 module.exports = {
   plugins: [
+    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ["Poppins"],
+          families: ['Poppins'],
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /static/,
-        },
-      },
-    },
+    'gatsby-plugin-react-svg',
   ],
-}
+};

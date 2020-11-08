@@ -1,23 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import Sitting from "../static/sitting.svg"
-import { BodyParagraph, HeaderBig, Button } from "../styles/BasicComponents"
-
-const HelloProgrammerSection = styled.section`
-  height: 80vh;
-  max-height: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const HelloBlock = styled.div`
-  width: 50%;
-`
-
-const HelloBodyParagrap = styled(BodyParagraph)`
-  margin: 24px 0;
-`
+import React from 'react';
+import Sitting from '../images/sitting.svg';
+import { HeaderBig, Button } from '../styles/BasicComponents';
+import {
+  HelloProgrammerSection,
+  HelloBlock,
+  HelloBodyParagrap,
+} from '../styles/Main';
 
 const Hello = () => {
   return (
@@ -32,7 +20,7 @@ const Hello = () => {
       </HelloBlock>
       <Sitting />
     </HelloProgrammerSection>
-  )
-}
+  );
+};
 
-export default Hello
+export default Hello;
