@@ -5,7 +5,6 @@ const LayoutFooter = styled.footer`
   width: 100%;
   background-color: ${(props) => props.theme.colors.grey_1};
 `;
-
 const FooterContainer = styled.div`
   width: 50%;
   margin: auto;

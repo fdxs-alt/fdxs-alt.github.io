@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, SpaceBetweenContainer } from '../styles/BasicComponents';
 import { Navbar, Logo, MenuBar, MenuItem, MenuLink } from '../styles/Main';
 
-const Nav = () => {
+const Nav = ({ location }: { location: Location }) => {
   return (
     <Navbar>
       <Logo />

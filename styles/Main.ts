@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BodyParagraph } from './BasicComponents';
 import V_2 from '../images/figures/Vector-1.svg';
 import logo from '../images/logo.svg';
+import size from '../utils/size';
 
 interface IGridItem {
   reverse?: boolean;
@@ -53,6 +54,9 @@ export const VectorTwo = styled(V_2)`
   width: 450px;
   margin-top: -45%;
   margin-left: -100px;
+  @media (max-width: ${size.laptop}) {
+    display: none;
+  }
 `;
 
 export const CardsWrapper = styled.div`

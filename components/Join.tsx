@@ -12,11 +12,16 @@ import Lens from '../images/icons/znajdziesz_programistów.svg';
 import Discount from '../images/icons/aktualna_wiedza_i_rabaty.svg';
 import V_4 from '../images/figures/Vector-3.svg';
 import styled from 'styled-components';
+import size from '../utils/size';
 
 const VectorFour = styled(V_4)`
   position: absolute;
   margin-top: -350px;
   z-index: -10;
+
+  @media (max-width: ${size.laptop}) {
+    display: none;
+  }
 `;
 
 const Join = () => {
