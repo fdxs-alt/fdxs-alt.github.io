@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, SpaceBetweenContainer } from '../styles/BasicComponents';
 import { Navbar, Logo, MenuBar, MenuItem, MenuLink } from '../styles/Main';
-
-const Nav = ({ location }: { location: Location }) => {
+const Nav = () => {
   return (
     <Navbar>
       <Logo />
@@ -10,24 +9,16 @@ const Nav = ({ location }: { location: Location }) => {
         <Button primary>Zostań Gladiatorem JS</Button>
         <MenuBar>
           <MenuItem>
-            <MenuLink to="/" location={location.pathname}>
-              Strona główna
-            </MenuLink>
+            <MenuLink to="/">Strona główna</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/about" location={location.pathname}>
-              O mnie
-            </MenuLink>
+            <MenuLink to="/about">O mnie</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/blog" location={location.pathname}>
-              Blog
-            </MenuLink>
+            <MenuLink to="/blog">Blog</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/contact" location={location.pathname}>
-              Kontakt
-            </MenuLink>
+            <MenuLink to="/contact">Kontakt</MenuLink>
           </MenuItem>
         </MenuBar>
       </SpaceBetweenContainer>
