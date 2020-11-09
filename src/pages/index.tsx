@@ -13,6 +13,10 @@ import MePrograming from '../../components/MePrograming';
 import Opinions from '../../components/Opinions';
 import Choice from '../../components/Choice';
 import Warranty from '../../components/Warranty';
+import Demo from '../../components/Demo';
+import V_4 from '../../images/figures/Vector-4.svg';
+import Gladiators from '../../components/Gladiators';
+import ContactForm from '../../components/ContactForm';
 const VectorOne = styled(V_1)`
   position: absolute;
   margin-top: -400px;
@@ -23,6 +27,12 @@ const VectorThree = styled(V_3)`
   position: absolute;
   margin-top: -450px;
   width: 25%;
+`;
+
+const VectorFour = styled(V_4)`
+  position: absolute;
+  z-index: -10;
+  margin-top: -100px;
 `;
 
 export default function Home() {
@@ -44,7 +54,13 @@ export default function Home() {
       <Join />
       <Opinions />
       <Choice />
+      <FlexEndWrapper>
+        <VectorFour />
+      </FlexEndWrapper>
+      <Demo />
       <Warranty />
+      <Gladiators />
+      <ContactForm />
     </Layout>
   );
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 interface IHeaderVariants {
   bold?: boolean;
   centered?: boolean;
+  end?: boolean;
 }
 
 interface IBodyVariants extends IHeaderVariants {
@@ -17,7 +18,8 @@ export const HeaderBig = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 34px;
   margin-bottom: 24px;
-  text-align: ${(props) => (props.centered ? 'center' : 'start')};
+  text-align: ${(props) =>
+    props.centered ? 'center' : props.end ? 'end' : 'start'};
 `;
 export const HeaderMedium = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
@@ -35,8 +37,11 @@ export const BodyParagraph = styled.p<IBodyVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: ${(props) => (props.sm ? '14px' : '16px')};
   color: ${(props) => props.theme.colors.grey_2};
-  text-align: ${(props) => (props.centered ? 'center' : 'start')};
+  text-align: ${(props) =>
+    props.centered ? 'center' : props.end ? 'end' : 'start'};
+
   line-height: 24px;
+  margin-bottom: 16px;
 `;
 
 export const Button = styled.button<IButtonVariant>`

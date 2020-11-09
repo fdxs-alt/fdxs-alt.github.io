@@ -4,6 +4,7 @@ import { Container, Wrapper } from '../styles/BasicComponents';
 import GlobalStyling from '../styles/styled-components/Global';
 import theme from '../styles/styled-components/theme';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const Layout: React.FC = ({ children }) => {
           <Nav />
         </Wrapper>
         {children}
+        <Footer />
       </Container>
     </ThemeProvider>
   );

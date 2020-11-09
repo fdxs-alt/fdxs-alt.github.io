@@ -14,7 +14,7 @@ import B from '../images/Books.svg';
 import Green from '../images/green.svg';
 import Yellow from '../images/yellow.svg';
 import Red from '../images/red.svg';
-const BooksContainer = styled.div`
+const LightBorderContainer = styled.div`
   border: 4px solid ${(props) => props.theme.colors.primary};
   width: 70%;
   padding: 1.5rem;
@@ -57,7 +57,7 @@ const Choice = () => {
         Możesz w prosty sposób dożywotnio dołączyć do społeczności Gladiatorów
         inwestując jednorazowo w zestaw zbiorów
       </CenteredBodyParagrap>
-      <BooksContainer>
+      <LightBorderContainer>
         <SpaceBetweenContainer>
           <Books />
           <div>
@@ -68,7 +68,7 @@ const Choice = () => {
                 </HeaderSmall>
               </ItemInfo>
               <PriceInfo>
-                <HeaderMedium bold>400 zł</HeaderMedium>
+                <HeaderMedium bold>300 zł</HeaderMedium>
                 <BodyParagraph style={{ textDecoration: 'line-through' }}>
                   400 zł
                 </BodyParagraph>
@@ -81,7 +81,7 @@ const Choice = () => {
             </div>
           </div>
         </SpaceBetweenContainer>
-      </BooksContainer>
+      </LightBorderContainer>
       <CenteredBodyParagrap marginbottom={6.2}>
         Jeśli wiesz, że jesteś kozakiem programowania i chciałbyś podjąć próbę
         nauki samodzielnie to możesz sprawdzić zbiory oddzielnie
