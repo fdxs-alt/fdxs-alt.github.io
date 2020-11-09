@@ -12,6 +12,7 @@ import Join from '../../components/Join';
 import MePrograming from '../../components/MePrograming';
 import Opinions from '../../components/Opinions';
 import Choice from '../../components/Choice';
+import Warranty from '../../components/Warranty';
 const VectorOne = styled(V_1)`
   position: absolute;
   margin-top: -400px;
@@ -43,6 +44,7 @@ export default function Home() {
       <Join />
       <Opinions />
       <Choice />
+      <Warranty />
     </Layout>
   );
 }

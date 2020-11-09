@@ -28,7 +28,8 @@ export const HeaderSmall = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 22px;
   margin-bottom: 16px;
-  line-height: 28px;
+  text-align: ${(props) => (props.centered ? 'center' : 'start')};
+  line-height: 24px;
 `;
 export const BodyParagraph = styled.p<IBodyVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
@@ -66,16 +67,17 @@ export const SpaceBetweenContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   max-width: 1400px;
   margin: 0 auto 200px auto;
 `;
 
 export const FlexEndWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 `;

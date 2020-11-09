@@ -72,6 +72,7 @@ export const CardText = styled(BodyParagraph)`
   width: 90%;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const Navbar = styled.nav`
