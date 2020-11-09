@@ -1,12 +1,8 @@
 import React from 'react';
 import { HeaderBig, Wrapper } from '../styles/BasicComponents';
 import styled from 'styled-components';
-import Person from '../images/women-1.svg';
+import Person from '../images/Ellipse.svg';
 import { CenteredBodyParagrap, Container } from '../styles/Main';
-
-const GridWrapper = styled(Wrapper)`
-  padding: 8em 0;
-`;
 
 const Grid = styled.div`
   width: fit-content;
@@ -18,7 +14,7 @@ const Grid = styled.div`
 
 const Previous = () => {
   return (
-    <GridWrapper>
+    <Wrapper>
       <Container>
         <HeaderBig bold style={{ textAlign: 'center' }}>
           Poznaj swoich poprzedników!
@@ -33,7 +29,7 @@ const Previous = () => {
           ))}
         </Grid>
       </Container>
-    </GridWrapper>
+    </Wrapper>
   );
 };
 

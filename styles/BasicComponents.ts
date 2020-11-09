@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface IHeaderVariants {
   bold?: boolean;
+  centered?: boolean;
 }
 
 interface IBodyVariants extends IHeaderVariants {
@@ -16,19 +17,24 @@ export const HeaderBig = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 34px;
   margin-bottom: 24px;
+  text-align: ${(props) => (props.centered ? 'center' : 'start')};
 `;
 export const HeaderMedium = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 26px;
+  margin-bottom: 10px;
 `;
 export const HeaderSmall = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 22px;
+  margin-bottom: 16px;
+  line-height: 28px;
 `;
 export const BodyParagraph = styled.p<IBodyVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: ${(props) => (props.sm ? '14px' : '16px')};
   color: ${(props) => props.theme.colors.grey_2};
+  text-align: ${(props) => (props.centered ? 'center' : 'start')};
   line-height: 24px;
 `;
 
@@ -66,7 +72,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   width: 50%;
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto 200px auto;
 `;
 
 export const FlexEndWrapper = styled.div`

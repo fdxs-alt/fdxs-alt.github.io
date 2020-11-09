@@ -54,22 +54,22 @@ export const VectorTwo = styled(V_2)`
   margin-left: -50px;
 `;
 
-export const SolutionsWrapper = styled.div`
+export const CardsWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: auto;
+  margin: 2rem 0 100px 0;
 `;
 
-export const SolutionCard = styled.div`
-  width: 30%;
+export const Card = styled.div`
+  width: 33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `;
 
-export const SolutionText = styled(BodyParagraph)`
+export const CardText = styled(BodyParagraph)`
+  width: 90%;
   text-align: center;
   margin-top: 2rem;
 `;
@@ -109,7 +109,7 @@ export const MenuLink = styled(Link)<IMenuLink>`
 `;
 
 export const HelloProgrammerSection = styled.section`
-  height: 80vh;
+  height: 60vh;
   max-height: 1200px;
   display: flex;
   align-items: center;
@@ -130,13 +130,14 @@ interface IMenuLink {
 }
 
 interface IBodyParagraph {
-  marginbottom: number;
+  marginbottom?: number;
   width?: number;
 }
 
 export const CenteredBodyParagrap = styled(BodyParagraph)<IBodyParagraph>`
   width: ${(props) => (props.width ? props.width + '%' : '50%')};
   text-align: center;
+  margin: auto;
   margin-bottom: ${(props) => props.marginbottom + 'rem'};
 `;
 

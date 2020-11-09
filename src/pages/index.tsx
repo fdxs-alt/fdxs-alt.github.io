@@ -7,11 +7,21 @@ import { FlexEndWrapper, Wrapper } from '../../styles/BasicComponents';
 import Problem from '../../components/Problem';
 import Previous from '../../components/Previous';
 import MeetMe from '../../components/MeetMe';
-
+import V_3 from '../../images/figures/Vector-2.svg';
+import Join from '../../components/Join';
+import MePrograming from '../../components/MePrograming';
+import Opinions from '../../components/Opinions';
+import Choice from '../../components/Choice';
 const VectorOne = styled(V_1)`
   position: absolute;
   margin-top: -400px;
   width: 30%;
+`;
+
+const VectorThree = styled(V_3)`
+  position: absolute;
+  margin-top: -450px;
+  width: 25%;
 `;
 
 export default function Home() {
@@ -26,6 +36,13 @@ export default function Home() {
       <Problem />
       <Previous />
       <MeetMe />
+      <FlexEndWrapper>
+        <VectorThree />
+      </FlexEndWrapper>
+      <MePrograming />
+      <Join />
+      <Opinions />
+      <Choice />
     </Layout>
   );
 }

@@ -14,9 +14,9 @@ import {
   GridItemBody,
   IconContainer,
   ProblemSection,
-  SolutionCard,
-  SolutionsWrapper,
-  SolutionText,
+  Card,
+  CardsWrapper,
+  CardText,
   VectorTwo,
 } from '../styles/Main';
 
@@ -78,35 +78,35 @@ const Problem = () => {
           <CenteredBodyParagrap marginbottom={3}>
             Można ją opisać w 3 głównych punktach:
           </CenteredBodyParagrap>
-          <SolutionsWrapper>
-            <SolutionCard>
+          <CardsWrapper>
+            <Card>
               <IconContainer>
                 <JSDSC />
               </IconContainer>
-              <SolutionText>
+              <CardText>
                 Jesteśmy pomocną i zmotywowaną społecznością JSowców na
                 Discordzie
-              </SolutionText>
-            </SolutionCard>
-            <SolutionCard>
+              </CardText>
+            </Card>
+            <Card>
               <IconContainer>
                 <CodeReview />
               </IconContainer>
-              <SolutionText>
+              <CardText>
                 Realizujemy trudne i wymagające zadania w code pairing z
                 cotygodniowym code review
-              </SolutionText>
-            </SolutionCard>
-            <SolutionCard>
+              </CardText>
+            </Card>
+            <Card>
               <IconContainer>
                 <Teams />
               </IconContainer>
-              <SolutionText>
+              <CardText>
                 Pracujemy w zgranych teamach nad ambitnymi projektami do
                 portfolio.
-              </SolutionText>
-            </SolutionCard>
-          </SolutionsWrapper>
+              </CardText>
+            </Card>
+          </CardsWrapper>
         </ProblemSection>
       </Wrapper>
       <VectorTwo />
