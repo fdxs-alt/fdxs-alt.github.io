@@ -1,25 +1,8 @@
 import React from 'react';
 import Stepper from '../utils/Stepper';
-import styled from 'styled-components';
-import Woman2 from '../images/woman_2.svg';
+import Woman2 from '../../images/woman_2.svg';
 import { BodyParagraph, HeaderSmall } from '../styles/BasicComponents';
-import size from '../utils/size';
-
-const OpinionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 100px;
-  align-items: center;
-
-  @media (max-width: ${size.tablet}) {
-    width: 60%;
-  }
-
-  @media (max-width: ${size.small}) {
-    width: 80%;
-  }
-`;
+import { OpinionWrapper } from '../styles/home/OpinionComponent';
 
 const Opinions = () => {
   return (

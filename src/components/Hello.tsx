@@ -1,5 +1,5 @@
 import React from 'react';
-import SittingVector from '../images/sitting.svg';
+import SittingVector from '../../images/png/sitting.png';
 import { HeaderBig, Button } from '../styles/BasicComponents';
 import {
   HelloProgrammerSection,
@@ -7,8 +7,16 @@ import {
   HelloBodyParagrap,
 } from '../styles/Main';
 import styled from 'styled-components';
+import size from '../utils/size';
 
-const Sitting = styled(SittingVector)``;
+const Sitting = styled.img`
+  width: 50%;
+
+  @media (max-width: ${size.tablet}) {
+    max-width: 500px;
+    width: 100%;
+  }
+`;
 
 const Hello = () => {
   return (
@@ -21,7 +29,7 @@ const Hello = () => {
         </HelloBodyParagrap>
         <Button primary>Dołącz do Gladiatorów Javascriptu!</Button>
       </HelloBlock>
-      <Sitting />
+      <Sitting src={SittingVector} />
     </HelloProgrammerSection>
   );
 };

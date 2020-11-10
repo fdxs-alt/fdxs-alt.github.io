@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ApproveVector from '../images/approve.svg';
+import size from '../utils/size';
+import ApproveVector from '../../images/png/approve.png';
 import { HeaderBig, Button, Wrapper } from '../styles/BasicComponents';
 import {
   HelloProgrammerSection,
@@ -8,15 +9,20 @@ import {
   HelloBodyParagrap,
 } from '../styles/Main';
 
-const Approve = styled(ApproveVector)`
-  width: fit-content;
+const Approve = styled.img`
+  width: 45%;
+
+  @media (max-width: ${size.tablet}) {
+    max-width: 400px;
+    width: 80%;
+  }
 `;
 
 const Warranty = () => {
   return (
     <Wrapper>
       <HelloProgrammerSection>
-        <Approve />
+        <Approve src={ApproveVector} />
         <HelloBlock>
           <HeaderBig bold>Gwarancja jakości</HeaderBig>
           <HelloBodyParagrap>

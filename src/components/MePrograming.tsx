@@ -1,23 +1,15 @@
 import React from 'react';
-import { HeaderBig, HeaderMedium, Wrapper } from '../styles/BasicComponents';
+import {
+  SolutionHeader,
+  Decorated,
+} from '../styles/Home/MeProgramingComponent';
+import { HeaderBig, Wrapper } from '../styles/BasicComponents';
 import {
   Card,
   CardsWrapper,
   CardText,
   CenteredBodyParagrap,
 } from '../styles/Main';
-import styled from 'styled-components';
-
-const Decorated = styled.b`
-  text-decoration: underline;
-  color: ${(props) => props.theme.colors.primary};
-`;
-
-const SolutionHeader = styled(HeaderMedium)`
-  width: 40%;
-  text-align: center;
-  margin: 0;
-`;
 
 const MePrograming = () => {
   return (

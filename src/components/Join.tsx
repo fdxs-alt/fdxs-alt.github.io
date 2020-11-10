@@ -7,35 +7,10 @@ import {
   CenteredBodyParagrap,
   IconContainer,
 } from '../styles/Main';
-import Mentor from '../images/icons/mentor.svg';
-import Lens from '../images/icons/znajdziesz_programistów.svg';
-import Discount from '../images/icons/aktualna_wiedza_i_rabaty.svg';
-import V_4 from '../images/figures/Vector-3.svg';
-import styled from 'styled-components';
-import size from '../utils/size';
-
-const VectorFour = styled(V_4)`
-  position: absolute;
-  margin-top: -350px;
-  z-index: -10;
-
-  @media (max-width: ${size.laptop}) {
-    width: 30%;
-  }
-
-  @media (max-width: ${size.tablet}) {
-    display: none;
-  }
-`;
-
-const Container = styled.div`
-  width: 60%;
-  margin: 2em auto;
-
-  @media (max-width: ${size.tablet}) {
-    width: 100%;
-  }
-`;
+import Mentor from '../../images/icons/mentor.svg';
+import Lens from '../../images/icons/znajdziesz_programistów.svg';
+import Discount from '../../images/icons/aktualna_wiedza_i_rabaty.svg';
+import { Container, VectorFour } from '../styles/home/JoinComponent';
 
 const Join = () => {
   return (

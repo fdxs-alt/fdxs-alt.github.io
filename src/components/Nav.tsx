@@ -1,9 +1,10 @@
 import React from 'react';
+import useMediaQuery from '../utils/useMediaQuery';
 import { Button, SpaceBetweenContainer } from '../styles/BasicComponents';
 import { Navbar, Logo, MenuBar, MenuItem, MenuLink } from '../styles/Main';
 const Nav = () => {
   const l = typeof window !== 'undefined' && location;
-
+  const isTablet = useMediaQuery('(max-width: 900px)');
   return (
     <Navbar>
       <Logo />

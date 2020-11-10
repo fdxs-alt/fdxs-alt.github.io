@@ -8,52 +8,19 @@ import {
   SpaceBetweenContainer,
   Wrapper,
 } from '../styles/BasicComponents';
-import { Card, CardText, CenteredBodyParagrap } from '../styles/Main';
-import styled from 'styled-components';
-import B from '../images/Books.svg';
-import Green from '../images/green.svg';
-import Yellow from '../images/yellow.svg';
-import Red from '../images/red.svg';
-import size from '../utils/size';
-const LightBorderContainer = styled.div`
-  border: 4px solid ${(props) => props.theme.colors.primary};
-  width: 70%;
-  padding: 1.5rem;
-  margin: 0 auto 100px auto;
-`;
-
-const Books = styled(B)`
-  width: 50%;
-`;
-
-const ItemInfo = styled.div`
-  width: 60%;
-`;
-
-const PriceInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
-
-const BookCard = styled(Card)`
-  padding: 1.7rem;
-  box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
-    0px 10px 92px 0px rgba(210, 207, 238, 0.2);
-  justify-content: space-between;
-`;
-
-const LinedParagraph = styled(BodyParagraph)`
-  margin-bottom: 24px;
-  text-decoration: line-through;
-`;
-
-const BookCardsWrapper = styled(SpaceBetweenContainer)`
-  @media (max-width: ${size.tablet}) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
+import { CardText, CenteredBodyParagrap } from '../styles/Main';
+import Green from '../../images/green.svg';
+import Yellow from '../../images/yellow.svg';
+import Red from '../../images/red.svg';
+import {
+  LightBorderContainer,
+  Books,
+  ItemInfo,
+  PriceInfo,
+  BookCardsWrapper,
+  BookCard,
+  LinedParagraph,
+} from '../styles/Home/ChoiceComponent';
 
 const Choice = () => {
   return (

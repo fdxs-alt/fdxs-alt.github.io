@@ -1,12 +1,12 @@
 import React from 'react';
 import { HeaderBig, Wrapper } from '../styles/BasicComponents';
-import Laptop from '../images/icons/laptop_1.svg';
-import Hat from '../images/icons/graduation-hat_1.svg';
-import Megaphone from '../images/icons/megaphone.svg';
-import Idea from '../images/icons/idea_1.svg';
-import CodeReview from '../images/icons/cotygodniowe_review.svg';
-import JSDSC from '../images/icons/js_dsc.svg';
-import Teams from '../images/icons/zgrane_teamy_portfolio.svg';
+import Laptop from '../../images/icons/laptop_1.svg';
+import Hat from '../../images/icons/graduation-hat_1.svg';
+import Megaphone from '../../images/icons/megaphone.svg';
+import Idea from '../../images/icons/idea_1.svg';
+import CodeReview from '../../images/icons/cotygodniowe_review.svg';
+import JSDSC from '../../images/icons/js_dsc.svg';
+import Teams from '../../images/icons/zgrane_teamy_portfolio.svg';
 import {
   CenteredBodyParagrap,
   Grid,

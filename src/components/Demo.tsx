@@ -1,57 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import {
+  HelloBlock as InfoBlock,
+  HelloBodyParagrap,
+  Logo,
+} from '../styles/Main';
 import {
   BodyParagraph,
   Button,
+  Container,
   HeaderBig,
   HeaderSmall,
-  SpaceBetweenContainer,
-  Wrapper,
 } from '../styles/BasicComponents';
-import logo from '../images/logo.svg';
-import { HelloBlock as InfoBlock, HelloBodyParagrap } from '../styles/Main';
-import size from '../utils/size';
-
-const Logo = styled(logo)`
-  width: 150px;
-  height: 150px;
-  margin-bottom: 24px;
-`;
-
-const DemoWrapper = styled(Wrapper)`
-  padding: 100px 125px;
-  background-color: ${(props) => props.theme.colors.white};
-  box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
-    0px 10px 92px 0px rgba(210, 207, 238, 0.2);
-
-  @media (max-width: ${size.tablet}) {
-    padding: 50px 0;
-  }
-`;
-
-const Container = styled(SpaceBetweenContainer)`
-  align-items: center;
-
-  @media (max-width: ${size.tablet}) {
-    flex-direction: column;
-  }
-`;
-
-const PrimaryBorderContainer = styled.div`
-  border: 4px solid ${(props) => props.theme.colors.primary};
-  width: 40%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
-    0px 10px 92px 0px rgba(210, 207, 238, 0.2);
-
-  @media (max-width: ${size.tablet}) {
-    width: 100%;
-  }
-`;
+import {
+  DemoWrapper,
+  PrimaryBorderContainer,
+} from '../styles/home/DemoComponent';
 
 const Demo = () => {
   return (

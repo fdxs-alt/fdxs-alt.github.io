@@ -1,28 +1,9 @@
 import React from 'react';
 import { HeaderBig, Wrapper } from '../styles/BasicComponents';
-import styled from 'styled-components';
-import Person from '../images/Ellipse.svg';
+import Person from '../../images/Ellipse.svg';
 import { CenteredBodyParagrap, Container } from '../styles/Main';
 import useMediaQuery from '../utils/useMediaQuery';
-import size from '../utils/size';
-
-const Grid = styled.div`
-  width: fit-content;
-  display: grid;
-  grid-template-columns: repeat(7, 90px);
-  grid-template-rows: repeat(3, 90px);
-  gap: 1rem;
-
-  @media (max-width: ${size.tablet}) {
-    grid-template-columns: repeat(4, 90px);
-    grid-template-rows: repeat(3, 90px);
-  }
-
-  @media (max-width: ${size.small}) {
-    grid-template-columns: repeat(3, 90px);
-    grid-template-rows: repeat(2, 90px);
-  }
-`;
+import { Grid } from '../styles/home/PreviousComponent';
 
 const Previous = () => {
   const isTablet = useMediaQuery('(max-width: 900px)');

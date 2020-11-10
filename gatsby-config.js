@@ -1,5 +1,16 @@
+const path = require(`path`);
+
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `images`, 'png'),
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-eslint',
@@ -23,5 +34,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-svg',
+    {
+      resolve: 'gatsby-plugin-netlify-cache',
+      options: {
+        cachePublic: true,
+      },
+    },
   ],
 };

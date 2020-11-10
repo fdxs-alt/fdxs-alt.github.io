@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SpaceBetweenContainer } from '../styles/BasicComponents';
-import Logo from '../images/image_8.svg';
+import Logo from '../../images/image_8.svg';
 import { Link } from 'gatsby';
 
 const LayoutFooter = styled.footer`

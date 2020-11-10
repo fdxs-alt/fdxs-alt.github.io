@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { BodyParagraph } from './BasicComponents';
-import V_2 from '../images/figures/Vector-1.svg';
-import logo from '../images/logo.svg';
+import V_2 from '../../images/figures/Vector-1.svg';
+import logo from '../../images/logo.svg';
 import size from '../utils/size';
 
 interface IGridItem {
@@ -167,6 +167,7 @@ export const HelloProgrammerSection = styled.section`
   @media (max-width: ${size.tablet}) {
     flex-direction: column;
     justify-content: center;
+    margin: 8em 0;
   }
 `;
 
