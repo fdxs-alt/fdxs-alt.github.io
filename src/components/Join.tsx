@@ -10,7 +10,7 @@ import {
 import Mentor from '../../images/icons/mentor.svg';
 import Lens from '../../images/icons/znajdziesz_programistów.svg';
 import Discount from '../../images/icons/aktualna_wiedza_i_rabaty.svg';
-import { Container, VectorFour } from '../styles/home/JoinComponent';
+import { Container, VectorFour } from '../styles/Home/JoinComponent';
 
 const Join = () => {
   return (

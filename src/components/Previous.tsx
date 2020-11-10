@@ -3,7 +3,7 @@ import { HeaderBig, Wrapper } from '../styles/BasicComponents';
 import Person from '../../images/Ellipse.svg';
 import { CenteredBodyParagrap, Container } from '../styles/Main';
 import useMediaQuery from '../utils/useMediaQuery';
-import { Grid } from '../styles/home/PreviousComponent';
+import { Grid } from '../styles/Home/PreviousComponent';
 
 const Previous = () => {
   const isTablet = useMediaQuery('(max-width: 900px)');

@@ -7,7 +7,7 @@ import Society from '../../images/icons/spolecznosc_js.svg';
 import {
   VectorSix,
   GladiatorsWrapper,
-} from '../styles/home/GladiatorsComponent';
+} from '../styles/Home/GladiatorsComponent';
 
 const Gladiators = () => {
   return (

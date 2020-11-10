@@ -2,7 +2,7 @@ import React from 'react';
 import Stepper from '../utils/Stepper';
 import Woman2 from '../../images/woman_2.svg';
 import { BodyParagraph, HeaderSmall } from '../styles/BasicComponents';
-import { OpinionWrapper } from '../styles/home/OpinionComponent';
+import { OpinionWrapper } from '../styles/Home/OpinionComponent';
 
 const Opinions = () => {
   return (

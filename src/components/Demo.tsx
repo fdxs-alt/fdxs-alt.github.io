@@ -14,7 +14,7 @@ import {
 import {
   DemoWrapper,
   PrimaryBorderContainer,
-} from '../styles/home/DemoComponent';
+} from '../styles/Home/DemoComponent';
 
 const Demo = () => {
   return (
