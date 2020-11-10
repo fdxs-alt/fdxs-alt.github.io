@@ -1,11 +1,14 @@
 import React from 'react';
-import Sitting from '../images/sitting.svg';
+import SittingVector from '../images/sitting.svg';
 import { HeaderBig, Button } from '../styles/BasicComponents';
 import {
   HelloProgrammerSection,
   HelloBlock,
   HelloBodyParagrap,
 } from '../styles/Main';
+import styled from 'styled-components';
+
+const Sitting = styled(SittingVector)``;
 
 const Hello = () => {
   return (

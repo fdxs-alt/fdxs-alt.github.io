@@ -13,6 +13,10 @@ const VectorSix = styled(V_6)`
   position: absolute;
 
   @media (max-width: ${size.laptop}) {
+    width: 20%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
   }
 `;

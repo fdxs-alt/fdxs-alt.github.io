@@ -3,6 +3,7 @@ import Stepper from '../utils/Stepper';
 import styled from 'styled-components';
 import Woman2 from '../images/woman_2.svg';
 import { BodyParagraph, HeaderSmall } from '../styles/BasicComponents';
+import size from '../utils/size';
 
 const OpinionWrapper = styled.div`
   display: flex;
@@ -10,6 +11,14 @@ const OpinionWrapper = styled.div`
   width: 50%;
   margin-top: 100px;
   align-items: center;
+
+  @media (max-width: ${size.tablet}) {
+    width: 60%;
+  }
+
+  @media (max-width: ${size.small}) {
+    width: 80%;
+  }
 `;
 
 const Opinions = () => {

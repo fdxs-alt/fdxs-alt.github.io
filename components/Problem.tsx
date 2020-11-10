@@ -18,8 +18,8 @@ import {
   CardsWrapper,
   CardText,
   VectorTwo,
+  Bold,
 } from '../styles/Main';
-
 const Problem = () => {
   return (
     <>
@@ -36,7 +36,8 @@ const Problem = () => {
           <Grid>
             <GridItem>
               <GridItemBody>
-                Jak skutecznie mam się rozwijać i które umiejętności są istotne?
+                <Bold>Jak</Bold> skutecznie mam się rozwijać i które
+                umiejętności są istotne?
               </GridItemBody>
               <IconContainer>
                 <Hat />
@@ -44,7 +45,8 @@ const Problem = () => {
             </GridItem>
             <GridItem reverse>
               <GridItemBody reverse>
-                Gdzie znajdę doświadczonego kolegę, który sprawdzi mój kod?
+                <Bold>Gdzie</Bold> znajdę doświadczonego kolegę, który sprawdzi
+                mój kod?
               </GridItemBody>
               <IconContainer>
                 <Megaphone />
@@ -52,8 +54,8 @@ const Problem = () => {
             </GridItem>
             <GridItem>
               <GridItemBody>
-                Gdzie mogę znaleźć praktyczne zadania programistyczne, które
-                stanowią wyzwanie i zapewnią rozwój?
+                <Bold>Gdzie</Bold> mogę znaleźć praktyczne zadania
+                programistyczne, które stanowią wyzwanie i zapewnią rozwój?
               </GridItemBody>
               <IconContainer>
                 <Laptop />
@@ -61,7 +63,8 @@ const Problem = () => {
             </GridItem>
             <GridItem reverse>
               <GridItemBody reverse>
-                Gdzie znajdę osoby chętne do współpracy przy projektach?
+                <Bold>Gdzie </Bold>znajdę osoby chętne do współpracy przy
+                projektach?
               </GridItemBody>
               <IconContainer>
                 <Idea />
@@ -73,7 +76,7 @@ const Problem = () => {
           </HeaderBig>
           <CenteredBodyParagrap marginbottom={4}>
             Każdy z tych problemów rozwiązuje inicjatywa, którą nazwałem
-            Gladiatorzy Javascriptu.
+            <Bold> Gladiatorzy Javascriptu.</Bold>
           </CenteredBodyParagrap>
           <CenteredBodyParagrap marginbottom={3}>
             Można ją opisać w 3 głównych punktach:

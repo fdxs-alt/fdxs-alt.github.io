@@ -9,6 +9,11 @@ interface IGridItem {
   reverse?: boolean;
 }
 
+export const Bold = styled.b`
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.grey_1};
+`;
+
 export const ProblemSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -21,6 +26,12 @@ export const Grid = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+
+  @media (max-width: ${size.small}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const GridItem = styled.div<IGridItem>`
@@ -30,13 +41,17 @@ export const GridItem = styled.div<IGridItem>`
   justify-content: space-between;
   flex-direction: ${(props) => (props.reverse ? 'row-reverse' : 'row')};
   line-height: 25px;
-  text-align: ${(props) => (props.reverse ? 'start' : 'end')};
+
+  @media (max-width: ${size.small}) {
+    padding: 1em;
+  }
 `;
 
 export const GridItemBody = styled(BodyParagraph)<IGridItem>`
   width: calc(100% - 90px);
   margin-left: ${(props) => (props.reverse ? '16px' : '0')};
   margin-right: ${(props) => (props.reverse ? '0' : '16px')};
+  text-align: ${(props) => (props.reverse ? 'start' : 'end')};
 `;
 
 export const IconContainer = styled.div`
@@ -55,6 +70,10 @@ export const VectorTwo = styled(V_2)`
   margin-top: -45%;
   margin-left: -100px;
   @media (max-width: ${size.laptop}) {
+    width: 30%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
   }
 `;
@@ -64,13 +83,33 @@ export const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 2rem 0 100px 0;
+  align-items: center;
+
+  @media (max-width: ${size.tablet}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 `;
 
 export const Card = styled.div`
   width: 33%;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: ${size.tablet}) {
+    width: 80%;
+    margin-bottom: 2em;
+    min-height: unset;
+  }
+
+  @media (max-width: ${size.mobile}) {
+    width: 90%;
+  }
 `;
 
 export const CardText = styled(BodyParagraph)`
@@ -78,6 +117,10 @@ export const CardText = styled(BodyParagraph)`
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+
+  @media (max-width: ${size.small}) {
+    width: 100%;
+  }
 `;
 
 export const Navbar = styled.nav`
@@ -120,19 +163,34 @@ export const HelloProgrammerSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${size.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const HelloBlock = styled.div`
   width: 50%;
+
+  @media (max-width: ${size.tablet}) {
+    width: 100%;
+    text-align: center;
+    margin: 2em 0;
+  }
 `;
 
 export const HelloBodyParagrap = styled(BodyParagraph)`
   margin: 24px 0;
+
+  @media (max-width: ${size.tablet}) {
+    text-align: center;
+  }
 `;
 
 interface IMenuLink {
   to: string;
-  location: string;
+  location?: string;
 }
 
 interface IBodyParagraph {
@@ -143,8 +201,12 @@ interface IBodyParagraph {
 export const CenteredBodyParagrap = styled(BodyParagraph)<IBodyParagraph>`
   width: ${(props) => (props.width ? props.width + '%' : '50%')};
   text-align: center;
-  margin: auto;
+  margin: 2em auto;
   margin-bottom: ${(props) => props.marginbottom + 'rem'};
+
+  @media (max-width: ${size.tablet}) {
+    width: 100%;
+  }
 `;
 
 export const Container = styled.section`

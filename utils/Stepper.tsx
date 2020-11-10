@@ -1,6 +1,7 @@
 import React, { Children, useState } from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '../styles/BasicComponents';
+import size from './size';
 
 const OpinionsWrapper = styled(Wrapper)`
   align-items: center;
@@ -15,6 +16,10 @@ const StepsWrapper = styled.div`
   display: flex;
   margin: 50px 0 100px 0;
   justify-content: space-between;
+
+  @media (max-width: ${size.small}) {
+    width: 50%;
+  }
 `;
 interface IStep {
   selected?: boolean;

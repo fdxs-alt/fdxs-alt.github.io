@@ -16,7 +16,7 @@ import Warranty from '../../components/Warranty';
 import Demo from '../../components/Demo';
 import V_4 from '../../images/figures/Vector-4.svg';
 import Gladiators from '../../components/Gladiators';
-import ContactForm from '../../components/ContactForm';
+import Contact from '../../components/ContactForm';
 import size from '../../utils/size';
 const VectorOne = styled(V_1)`
   position: absolute;
@@ -24,6 +24,10 @@ const VectorOne = styled(V_1)`
   width: 30%;
 
   @media (max-width: ${size.laptop}) {
+    width: 30%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
   }
 `;
@@ -34,6 +38,10 @@ const VectorThree = styled(V_3)`
   width: 25%;
 
   @media (max-width: ${size.laptop}) {
+    width: 30%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
   }
 `;
@@ -44,6 +52,10 @@ const VectorFour = styled(V_4)`
   margin-top: -100px;
 
   @media (max-width: ${size.laptop}) {
+    width: 30%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
   }
 `;
@@ -73,7 +85,7 @@ export default function Home() {
       <Demo />
       <Warranty />
       <Gladiators />
-      <ContactForm />
+      <Contact />
     </Layout>
   );
 }

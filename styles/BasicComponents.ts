@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import size from '../utils/size';
 
 interface IHeaderVariants {
   bold?: boolean;
@@ -20,6 +21,11 @@ export const HeaderBig = styled.h1<IHeaderVariants>`
   margin-bottom: 24px;
   text-align: ${(props) =>
     props.centered ? 'center' : props.end ? 'end' : 'start'};
+
+  @media (max-width: ${size.tablet}) {
+    text-align: center;
+    font-size: 22px;
+  }
 `;
 export const HeaderMedium = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
@@ -46,14 +52,15 @@ export const BodyParagraph = styled.p<IBodyVariants>`
 
 export const Button = styled.button<IButtonVariant>`
   background-color: ${(props) =>
-    props.primary ? props.theme.colors.primary : props.theme.colors.grey_1};
+    props.primary ? props.theme.colors.primary : props.theme.colors.white};
   border-radius: 4px;
   font-size: 16px;
   padding: 14px 24px;
   font-weight: 700;
-  border: none;
+  border: ${(props) =>
+    props.primary ? 'none' : `1 px solid ${props.theme.colors.grey_3}`};
   color: ${(props) =>
-    props.primary ? props.theme.colors.grey_1 : props.theme.colors.white};
+    props.primary ? props.theme.colors.grey_1 : props.theme.colors.grey_1};
   cursor: pointer;
 `;
 export const Avatar = styled.img`
@@ -79,6 +86,20 @@ export const Wrapper = styled.section`
   width: 60%;
   max-width: 1400px;
   margin: 0 auto 200px auto;
+
+  @media (max-width: ${size.laptop}) {
+    width: 75%;
+  }
+
+  @media (max-width: ${size.tablet}) {
+    width: 80%;
+    margin: 0 auto 100px auto;
+  }
+
+  @media (max-width: ${size.small}) {
+    width: 90%;
+    margin: 0 auto 50px auto;
+  }
 `;
 
 export const FlexEndWrapper = styled.div`

@@ -20,7 +20,20 @@ const VectorFour = styled(V_4)`
   z-index: -10;
 
   @media (max-width: ${size.laptop}) {
+    width: 30%;
+  }
+
+  @media (max-width: ${size.tablet}) {
     display: none;
+  }
+`;
+
+const Container = styled.div`
+  width: 60%;
+  margin: 2em auto;
+
+  @media (max-width: ${size.tablet}) {
+    width: 100%;
   }
 `;
 
@@ -28,11 +41,11 @@ const Join = () => {
   return (
     <>
       <Wrapper>
-        <div style={{ width: '60%', margin: '2em auto' }}>
+        <Container>
           <HeaderBig bold centered>
             Dołączając do społeczności Gladiatorów na Discordzie
           </HeaderBig>
-        </div>
+        </Container>
         <CardsWrapper>
           <Card>
             <IconContainer>

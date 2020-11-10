@@ -1,11 +1,16 @@
 import React from 'react';
-import Approve from '../images/approve.svg';
+import styled from 'styled-components';
+import ApproveVector from '../images/approve.svg';
 import { HeaderBig, Button, Wrapper } from '../styles/BasicComponents';
 import {
   HelloProgrammerSection,
   HelloBlock,
   HelloBodyParagrap,
 } from '../styles/Main';
+
+const Approve = styled(ApproveVector)`
+  width: fit-content;
+`;
 
 const Warranty = () => {
   return (

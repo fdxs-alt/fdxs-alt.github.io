@@ -10,6 +10,7 @@ import {
 } from '../styles/BasicComponents';
 import logo from '../images/logo.svg';
 import { HelloBlock as InfoBlock, HelloBodyParagrap } from '../styles/Main';
+import size from '../utils/size';
 
 const Logo = styled(logo)`
   width: 150px;
@@ -22,10 +23,18 @@ const DemoWrapper = styled(Wrapper)`
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
+
+  @media (max-width: ${size.tablet}) {
+    padding: 50px 0;
+  }
 `;
 
 const Container = styled(SpaceBetweenContainer)`
   align-items: center;
+
+  @media (max-width: ${size.tablet}) {
+    flex-direction: column;
+  }
 `;
 
 const PrimaryBorderContainer = styled.div`
@@ -38,6 +47,10 @@ const PrimaryBorderContainer = styled.div`
   padding: 1em;
   box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
+
+  @media (max-width: ${size.tablet}) {
+    width: 100%;
+  }
 `;
 
 const Demo = () => {
@@ -48,7 +61,7 @@ const Demo = () => {
           <HeaderBig bold end>
             Nie wiesz, który zestaw wybrać?
           </HeaderBig>
-          <HelloBodyParagrap end>
+          <HelloBodyParagrap end style={{ padding: '1rem' }}>
             Nie kupuj kota w worku! Sprawdź czy Twój poziom frontendowych
             umiejętności pozwala na dalszy rozwój z moimi zbiorami!
           </HelloBodyParagrap>

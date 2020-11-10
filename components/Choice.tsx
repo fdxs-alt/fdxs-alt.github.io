@@ -14,6 +14,7 @@ import B from '../images/Books.svg';
 import Green from '../images/green.svg';
 import Yellow from '../images/yellow.svg';
 import Red from '../images/red.svg';
+import size from '../utils/size';
 const LightBorderContainer = styled.div`
   border: 4px solid ${(props) => props.theme.colors.primary};
   width: 70%;
@@ -45,6 +46,13 @@ const BookCard = styled(Card)`
 const LinedParagraph = styled(BodyParagraph)`
   margin-bottom: 24px;
   text-decoration: line-through;
+`;
+
+const BookCardsWrapper = styled(SpaceBetweenContainer)`
+  @media (max-width: ${size.tablet}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Choice = () => {
@@ -81,12 +89,18 @@ const Choice = () => {
             </div>
           </div>
         </SpaceBetweenContainer>
+        <SpaceBetweenContainer>
+          <Button style={{ width: '45%' }}>582413</Button>
+          <Button style={{ width: '45%' }} primary>
+            Dołączam do Gladiatorów
+          </Button>
+        </SpaceBetweenContainer>
       </LightBorderContainer>
       <CenteredBodyParagrap marginbottom={6.2}>
         Jeśli wiesz, że jesteś kozakiem programowania i chciałbyś podjąć próbę
         nauki samodzielnie to możesz sprawdzić zbiory oddzielnie
       </CenteredBodyParagrap>
-      <SpaceBetweenContainer>
+      <BookCardsWrapper>
         <BookCard>
           <Red />
           <HeaderSmall bold centered>
@@ -120,7 +134,7 @@ const Choice = () => {
           <LinedParagraph>120 zł</LinedParagraph>
           <Button primary>Kliknij, aby zamówić!</Button>
         </BookCard>
-      </SpaceBetweenContainer>
+      </BookCardsWrapper>
     </Wrapper>
   );
 };
