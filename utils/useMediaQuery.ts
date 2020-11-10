@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 
 function useMediaQuery(mediaQuery: string) {
-  const [isVerified, setIsVerified] = useState(
-    !!window.matchMedia(mediaQuery).matches
-  );
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia(mediaQuery);
