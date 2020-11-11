@@ -22,7 +22,7 @@ export const DemoWrapper = styled(Wrapper)`
 
 export const Container = styled(SpaceBetweenContainer)`
   align-items: center;
-
+  justify-content: space-between;
   @media (max-width: ${size.tablet}) {
     flex-direction: column;
   }
@@ -35,7 +35,7 @@ export const PrimaryBorderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  padding: 1em 1.5em;
   box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
 

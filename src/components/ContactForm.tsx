@@ -9,6 +9,7 @@ import {
   ContactTextArea,
   ContactInput,
   SendButton,
+  Label,
 } from '../styles/Home/ContactComponent';
 import { Comments } from '../styles/Home/ChoiceComponent';
 
@@ -24,12 +25,15 @@ const Contact = () => {
       <ContentWrapper>
         <Comments src={CommentsVector} />
         <ContactForm>
+          <Label htmlFor="message">Twoja wiadomość</Label>
           <ContactTextArea
             required
             rows={8}
             placeholder="np. Ten zestaw mi naprawdę pomógł!"
           />
+          <Label htmlFor="name"> Twoje imię i nazwisko</Label>
           <ContactInput type="text" required placeholder="np. Jan Kowalski" />
+          <Label htmlFor="email">Twój adres email</Label>
           <ContactInput
             type="email"
             required

@@ -17,7 +17,6 @@ export const ContactForm = styled.form`
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   max-width: 500px;
 
   @media (max-width: ${size.tablet}) {
@@ -36,6 +35,7 @@ export const ContactInput = styled.input`
   margin-bottom: 2em;
   &::placeholder {
     color: ${(props) => props.theme.colors.grey_2};
+    font-size: 14px;
   }
 `;
 
@@ -51,11 +51,23 @@ export const ContactTextArea = styled.textarea`
   margin-bottom: 2em;
   &::placeholder {
     color: ${(props) => props.theme.colors.grey_2};
+    font-size: 14px;
   }
 `;
 
 export const SendButton = styled(Button)`
+  align-self: flex-end;
   @media (max-width: ${size.tablet}) {
     align-self: center;
   }
+`;
+export const Label = styled.label`
+  width: fit-content;
+  background-color: ${(props) => props.theme.colors.white};
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 10;
+  margin-left: 10px;
+  padding: 2px 3px;
+  margin-bottom: -11px;
 `;

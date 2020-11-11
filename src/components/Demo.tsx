@@ -1,19 +1,16 @@
 import React from 'react';
-import {
-  HelloBlock as InfoBlock,
-  HelloBodyParagrap,
-  Logo,
-} from '../styles/Main';
+import { HelloBlock as InfoBlock, HelloBodyParagrap } from '../styles/Main';
 import {
   BodyParagraph,
   Button,
-  Container,
   HeaderBig,
   HeaderSmall,
 } from '../styles/BasicComponents';
 import {
   DemoWrapper,
   PrimaryBorderContainer,
+  Container,
+  Logo,
 } from '../styles/Home/DemoComponent';
 
 const Demo = () => {

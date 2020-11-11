@@ -5,7 +5,6 @@ import {
   HeaderBig,
   HeaderMedium,
   HeaderSmall,
-  SpaceBetweenContainer,
   Wrapper,
 } from '../styles/BasicComponents';
 import { CardText, CenteredBodyParagrap } from '../styles/Main';
@@ -20,6 +19,12 @@ import {
   BookCardsWrapper,
   BookCard,
   LinedParagraph,
+  BooksWrapper,
+  BooksHeader,
+  BookBodyParagraph,
+  BookHeaderMedium,
+  ButtonSpaceBetweenContainer,
+  CodeInput,
 } from '../styles/Home/ChoiceComponent';
 
 const Choice = () => {
@@ -33,35 +38,37 @@ const Choice = () => {
         inwestując jednorazowo w zestaw zbiorów
       </CenteredBodyParagrap>
       <LightBorderContainer>
-        <SpaceBetweenContainer>
+        <BooksWrapper>
           <Books />
           <div>
-            <SpaceBetweenContainer>
+            <BooksWrapper>
               <ItemInfo>
-                <HeaderSmall bold>
+                <BooksHeader bold>
                   Wszystkie zbiory zadań Gladiatorów Javascriptu
-                </HeaderSmall>
+                </BooksHeader>
+                <BookBodyParagraph>
+                  Zestaw zbiorów + Dołączenie do społeczności
+                </BookBodyParagraph>
               </ItemInfo>
               <PriceInfo>
-                <HeaderMedium bold>300 zł</HeaderMedium>
-                <BodyParagraph style={{ textDecoration: 'line-through' }}>
+                <BookHeaderMedium bold>300 zł</BookHeaderMedium>
+                <BodyParagraph
+                  style={{
+                    textDecoration: 'line-through',
+                    textAlign: 'center',
+                  }}
+                  centered
+                >
                   400 zł
                 </BodyParagraph>
               </PriceInfo>
-            </SpaceBetweenContainer>
-            <div style={{ width: '70%' }}>
-              <BodyParagraph>
-                Zestaw zbiorów + Dołączenie do społeczności
-              </BodyParagraph>
-            </div>
+            </BooksWrapper>
           </div>
-        </SpaceBetweenContainer>
-        <SpaceBetweenContainer>
-          <Button style={{ width: '45%' }}>582413</Button>
-          <Button style={{ width: '45%' }} primary>
-            Dołączam do Gladiatorów
-          </Button>
-        </SpaceBetweenContainer>
+        </BooksWrapper>
+        <ButtonSpaceBetweenContainer>
+          <CodeInput type="number" defaultValue="582413" />
+          <Button primary>Dołączam do Gladiatorów</Button>
+        </ButtonSpaceBetweenContainer>
       </LightBorderContainer>
       <CenteredBodyParagrap marginbottom={6.2}>
         Jeśli wiesz, że jesteś kozakiem programowania i chciałbyś podjąć próbę

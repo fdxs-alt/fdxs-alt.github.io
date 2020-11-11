@@ -129,6 +129,7 @@ export const Navbar = styled.nav`
   width: 100%;
   padding: 1rem;
   align-items: center;
+  position: relative;
 `;
 
 export const Logo = styled(logo)`
@@ -154,6 +155,10 @@ export const MenuLink = styled(Link)<IMenuLink>`
   &:focus,
   :hover {
     color: ${(props) => props.theme.colors.secondary};
+  }
+  @media (max-width: ${size.tablet}) {
+    padding: 1.2rem;
+    font-size: 22px;
   }
 `;
 
@@ -217,4 +222,9 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const OpenButton = styled.button`
+  border: none;
+  background-color: inherit;
 `;
