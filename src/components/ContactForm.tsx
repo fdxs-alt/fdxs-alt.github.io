@@ -12,8 +12,10 @@ import {
   Label,
 } from '../styles/Home/ContactComponent';
 import { Comments } from '../styles/Home/ChoiceComponent';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const { ref, inView } = useInView();
   return (
     <Wrapper>
       <HeaderBig centered bold>
@@ -22,9 +24,24 @@ const Contact = () => {
       <CenteredBodyParagrap>
         Jeśli masz jakieś pytania lub wątpliwości - Napisz do mnie!
       </CenteredBodyParagrap>
-      <ContentWrapper>
-        <Comments src={CommentsVector} />
-        <ContactForm>
+      <ContentWrapper ref={ref}>
+        <Comments
+          src={CommentsVector}
+          animate={{ x: inView ? 0 : '-200%' }}
+          initial={{ x: '-200%' }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+          }}
+        />
+        <ContactForm
+          animate={{ x: inView ? 0 : '200%' }}
+          initial={{ x: '200%' }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+          }}
+        >
           <Label htmlFor="message">Twoja wiadomość</Label>
           <ContactTextArea
             required

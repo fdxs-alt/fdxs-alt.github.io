@@ -8,6 +8,7 @@ import {
   SpaceBetweenContainer,
 } from '../BasicComponents';
 import { Card } from '../Main';
+import { motion } from 'framer-motion';
 
 export const LightBorderContainer = styled.div`
   border: 4px solid ${(props) => props.theme.colors.primary};
@@ -67,7 +68,7 @@ export const BookCardsWrapper = styled(SpaceBetweenContainer)`
   }
 `;
 
-export const Comments = styled.img``;
+export const Comments = styled(motion.img)``;
 
 export const BooksWrapper = styled(SpaceBetweenContainer)`
   width: 100%;

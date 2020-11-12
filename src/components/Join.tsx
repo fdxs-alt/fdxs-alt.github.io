@@ -11,8 +11,10 @@ import Mentor from '../../images/icons/mentor.svg';
 import Lens from '../../images/icons/znajdziesz_programistów.svg';
 import Discount from '../../images/icons/aktualna_wiedza_i_rabaty.svg';
 import { Container, VectorFour } from '../styles/Home/JoinComponent';
+import { useInView } from 'react-intersection-observer';
 
 const Join = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <>
       <Wrapper>
@@ -21,7 +23,12 @@ const Join = () => {
             Dołączając do społeczności Gladiatorów na Discordzie
           </HeaderBig>
         </Container>
-        <CardsWrapper>
+        <CardsWrapper
+          ref={ref}
+          animate={{ opacity: inView ? 1 : 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+        >
           <Card>
             <IconContainer>
               <Mentor />

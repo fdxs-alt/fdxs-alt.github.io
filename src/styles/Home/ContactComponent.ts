@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import size from '../../utils/size';
 import { Button } from '../BasicComponents';
@@ -13,7 +14,7 @@ export const ContentWrapper = styled.section`
   }
 `;
 
-export const ContactForm = styled.form`
+export const ContactForm = styled(motion.form)`
   width: 50%;
   display: flex;
   flex-direction: column;

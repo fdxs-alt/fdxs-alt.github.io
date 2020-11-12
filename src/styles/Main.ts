@@ -79,7 +79,7 @@ export const VectorTwo = styled(V_2)`
   }
 `;
 
-export const CardsWrapper = styled.div`
+export const CardsWrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: space-between;

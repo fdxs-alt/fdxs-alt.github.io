@@ -8,8 +8,11 @@ import {
   VectorSix,
   GladiatorsWrapper,
 } from '../styles/Home/GladiatorsComponent';
+import { useInView } from 'react-intersection-observer';
 
 const Gladiators = () => {
+  const { inView, ref } = useInView({ triggerOnce: true });
+
   return (
     <>
       <VectorSix />
@@ -17,7 +20,12 @@ const Gladiators = () => {
         <HeaderBig bold centered>
           Gladiatorzy to
         </HeaderBig>
-        <GladiatorsWrapper>
+        <GladiatorsWrapper
+          ref={ref}
+          animate={{ opacity: inView ? 1 : 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+        >
           <Card>
             <IconContainer>
               <Society />

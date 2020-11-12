@@ -14,7 +14,7 @@ const Sitting = styled(motion.img)`
   width: 50%;
 
   @media (max-width: ${size.tablet}) {
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
   }
 `;
