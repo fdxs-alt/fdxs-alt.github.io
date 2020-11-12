@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import size from '../utils/size';
 
@@ -15,7 +16,7 @@ interface IButtonVariant {
   primary?: boolean;
 }
 
-export const HeaderBig = styled.h1<IHeaderVariants>`
+export const HeaderBig = styled(motion.h1)<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 34px;
   margin-bottom: 24px;
@@ -50,7 +51,7 @@ export const BodyParagraph = styled.p<IBodyVariants>`
   margin-bottom: 16px;
 `;
 
-export const Button = styled.button<IButtonVariant>`
+export const Button = styled(motion.button)<IButtonVariant>`
   background-color: ${(props) =>
     props.primary ? props.theme.colors.primary : props.theme.colors.white};
   border-radius: 4px;

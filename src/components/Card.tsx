@@ -21,12 +21,13 @@ const ImageWrapper = styled.div<IImage>`
   background-image: url(${Lens});
   background-position: center;
   background-repeat: no-repeat;
-  max-height: 220px;
+  max-height: 216px;
   z-index: ${(props) => (props.hovered ? 10 : -10)};
 `;
 export const BlogImage = styled.img<IImage>`
   width: 100%;
   max-height: 220px;
+  transition: 300ms ease-out;
   opacity: ${(props) => (props.hovered ? 0.3 : 1)};
 `;
 const Card = () => {

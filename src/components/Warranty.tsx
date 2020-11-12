@@ -10,7 +10,7 @@ import {
 } from '../styles/Main';
 
 const Approve = styled.img`
-  width: 45%;
+  width: 40%;
 
   @media (max-width: ${size.tablet}) {
     max-width: 400px;

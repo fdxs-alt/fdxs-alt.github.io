@@ -8,8 +8,9 @@ import {
 } from '../styles/Main';
 import styled from 'styled-components';
 import size from '../utils/size';
+import { motion } from 'framer-motion';
 
-const Sitting = styled.img`
+const Sitting = styled(motion.img)`
   width: 50%;
 
   @media (max-width: ${size.tablet}) {
@@ -21,7 +22,14 @@ const Sitting = styled.img`
 const Hello = () => {
   return (
     <HelloProgrammerSection>
-      <HelloBlock>
+      <HelloBlock
+        animate={{ x: 0 }}
+        initial={{ x: '-200%' }}
+        transition={{
+          duration: 0.3,
+          delay: 0.2,
+        }}
+      >
         <HeaderBig bold>Hej, programisto!</HeaderBig>
         <HelloBodyParagrap>
           Tworzymy społeczność newbie i junior JS devów, którzy chcą wspólnie
@@ -29,7 +37,15 @@ const Hello = () => {
         </HelloBodyParagrap>
         <Button primary>Dołącz do Gladiatorów Javascriptu!</Button>
       </HelloBlock>
-      <Sitting src={SittingVector} />
+      <Sitting
+        src={SittingVector}
+        animate={{ x: 0 }}
+        initial={{ x: '200%' }}
+        transition={{
+          duration: 0.3,
+          delay: 0.2,
+        }}
+      />
     </HelloProgrammerSection>
   );
 };

@@ -4,6 +4,7 @@ import { BodyParagraph } from './BasicComponents';
 import V_2 from '../../images/figures/Vector-1.svg';
 import logo from '../../images/logo.svg';
 import size from '../utils/size';
+import { motion } from 'framer-motion';
 
 interface IGridItem {
   reverse?: boolean;
@@ -34,7 +35,7 @@ export const Grid = styled.div`
   }
 `;
 
-export const GridItem = styled.div<IGridItem>`
+export const GridItem = styled(motion.div)<IGridItem>`
   width: 100%;
   display: flex;
   align-items: center;
@@ -93,7 +94,7 @@ export const CardsWrapper = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Card = styled(motion.div)`
   width: 33%;
   min-height: 180px;
   display: flex;
@@ -123,7 +124,7 @@ export const CardText = styled(BodyParagraph)`
   }
 `;
 
-export const Navbar = styled.nav`
+export const Navbar = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -141,8 +142,13 @@ export const MenuBar = styled.ul`
   display: flex;
   align-items: center;
 `;
-export const MenuItem = styled.li`
+export const MenuItem = styled(motion.li)`
   padding: 8px 12px;
+
+  @media (max-width: ${size.tablet}) {
+    padding: 1.2rem;
+    font-size: 15px;
+  }
 `;
 
 export const MenuLink = styled(Link)<IMenuLink>`
@@ -155,10 +161,6 @@ export const MenuLink = styled(Link)<IMenuLink>`
   &:focus,
   :hover {
     color: ${(props) => props.theme.colors.secondary};
-  }
-  @media (max-width: ${size.tablet}) {
-    padding: 1.2rem;
-    font-size: 22px;
   }
 `;
 
@@ -176,7 +178,7 @@ export const HelloProgrammerSection = styled.section`
   }
 `;
 
-export const HelloBlock = styled.div`
+export const HelloBlock = styled(motion.div)`
   width: 50%;
 
   @media (max-width: ${size.tablet}) {
@@ -224,7 +226,7 @@ export const Container = styled.section`
   justify-content: center;
 `;
 
-export const OpenButton = styled.button`
+export const OpenButton = styled(motion.button)`
   border: none;
   background-color: inherit;
 `;

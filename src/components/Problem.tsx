@@ -4,9 +4,6 @@ import Laptop from '../../images/icons/laptop_1.svg';
 import Hat from '../../images/icons/graduation-hat_1.svg';
 import Megaphone from '../../images/icons/megaphone.svg';
 import Idea from '../../images/icons/idea_1.svg';
-import CodeReview from '../../images/icons/cotygodniowe_review.svg';
-import JSDSC from '../../images/icons/js_dsc.svg';
-import Teams from '../../images/icons/zgrane_teamy_portfolio.svg';
 import {
   CenteredBodyParagrap,
   Grid,
@@ -14,16 +11,16 @@ import {
   GridItemBody,
   IconContainer,
   ProblemSection,
-  Card,
-  CardsWrapper,
-  CardText,
   VectorTwo,
   Bold,
 } from '../styles/Main';
+import { useInView } from 'react-intersection-observer';
+import Solution from './Solution';
 const Problem = () => {
+  const { inView, ref } = useInView({ triggerOnce: true });
   return (
     <>
-      <Wrapper>
+      <Wrapper ref={ref}>
         <ProblemSection>
           <HeaderBig bold style={{ textAlign: 'center' }}>
             Zapewne masz problem..
@@ -34,7 +31,14 @@ const Problem = () => {
           </CenteredBodyParagrap>
 
           <Grid>
-            <GridItem>
+            <GridItem
+              animate={{ x: inView ? 0 : '-200%' }}
+              initial={{ x: '-200%' }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+            >
               <GridItemBody>
                 <Bold>Jak</Bold> skutecznie mam się rozwijać i które
                 umiejętności są istotne?
@@ -43,7 +47,15 @@ const Problem = () => {
                 <Hat />
               </IconContainer>
             </GridItem>
-            <GridItem reverse>
+            <GridItem
+              reverse
+              animate={{ x: inView ? 0 : '200%' }}
+              initial={{ x: '200%' }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+            >
               <GridItemBody reverse>
                 <Bold>Gdzie</Bold> znajdę doświadczonego kolegę, który sprawdzi
                 mój kod?
@@ -52,7 +64,14 @@ const Problem = () => {
                 <Megaphone />
               </IconContainer>
             </GridItem>
-            <GridItem>
+            <GridItem
+              animate={{ x: inView ? 0 : '-200%' }}
+              initial={{ x: '-200%' }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+            >
               <GridItemBody>
                 <Bold>Gdzie</Bold> mogę znaleźć praktyczne zadania
                 programistyczne, które stanowią wyzwanie i zapewnią rozwój?
@@ -61,7 +80,15 @@ const Problem = () => {
                 <Laptop />
               </IconContainer>
             </GridItem>
-            <GridItem reverse>
+            <GridItem
+              reverse
+              animate={{ x: inView ? 0 : '200%' }}
+              initial={{ x: '200%' }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+            >
               <GridItemBody reverse>
                 <Bold>Gdzie </Bold>znajdę osoby chętne do współpracy przy
                 projektach?
@@ -71,45 +98,7 @@ const Problem = () => {
               </IconContainer>
             </GridItem>
           </Grid>
-          <HeaderBig bold style={{ textAlign: 'center', marginTop: '7em' }}>
-            ..a ja rozwiązanie!
-          </HeaderBig>
-          <CenteredBodyParagrap marginbottom={4}>
-            Każdy z tych problemów rozwiązuje inicjatywa, którą nazwałem
-            <Bold> Gladiatorzy Javascriptu.</Bold>
-          </CenteredBodyParagrap>
-          <CenteredBodyParagrap marginbottom={3}>
-            Można ją opisać w 3 głównych punktach:
-          </CenteredBodyParagrap>
-          <CardsWrapper>
-            <Card>
-              <IconContainer>
-                <JSDSC />
-              </IconContainer>
-              <CardText>
-                Jesteśmy pomocną i zmotywowaną społecznością JSowców na
-                Discordzie
-              </CardText>
-            </Card>
-            <Card>
-              <IconContainer>
-                <CodeReview />
-              </IconContainer>
-              <CardText>
-                Realizujemy trudne i wymagające zadania w code pairing z
-                cotygodniowym code review
-              </CardText>
-            </Card>
-            <Card>
-              <IconContainer>
-                <Teams />
-              </IconContainer>
-              <CardText>
-                Pracujemy w zgranych teamach nad ambitnymi projektami do
-                portfolio.
-              </CardText>
-            </Card>
-          </CardsWrapper>
+          <Solution />
         </ProblemSection>
       </Wrapper>
       <VectorTwo />
