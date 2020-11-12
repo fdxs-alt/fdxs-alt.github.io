@@ -85,7 +85,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   width: 60%;
   max-width: 1400px;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 150px auto;
 
   @media (max-width: ${size.laptop}) {
     width: 75%;

@@ -9,7 +9,7 @@ const GitLink = () => {
         query GitQuery {
           file(relativePath: { eq: "git.png" }) {
             childImageSharp {
-              fixed(quality: 100, width: 25) {
+              fixed(quality: 100, width: 24) {
                 ...GatsbyImageSharpFixed
               }
             }
