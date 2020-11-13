@@ -8,25 +8,14 @@ import {
   MenuLink,
   OpenButton,
   Logo as MenuLogo,
+  LinksContainerColumn,
+  MenuButton,
+  BigLogo,
 } from '../styles/Main';
 import Menu from '../../images/icons/ic_baseline-menu.svg';
 import Modal from '../utils/Modal';
-import styled from 'styled-components';
+import CloseButton from '../../images/icons/ic_baseline-close.svg';
 import { motion } from 'framer-motion';
-
-const LinksContainerColumn = styled(motion.ul)`
-  width: 100%;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-`;
-
-const MenuButton = styled(Button)`
-  font-size: 14px;
-`;
 
 const variants = {
   initial: { y: '-100%', opacity: 0 },
@@ -59,8 +48,16 @@ const Nav = () => {
                 onClick={() => setOpen((prev) => !prev)}
                 style={{ alignSelf: 'flex-end', justifySelf: 'flex-start' }}
               >
-                X
+                <CloseButton style={{ width: '40px' }} />
               </OpenButton>
+              <motion.div
+                variants={variants}
+                initial="initial"
+                animate="animation"
+                transition={{ delay: 0.4, duration: 0.4 }}
+              >
+                <BigLogo />
+              </motion.div>
               <MenuItem
                 variants={variants}
                 initial="initial"

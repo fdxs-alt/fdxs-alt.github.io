@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { BodyParagraph } from './BasicComponents';
+import { BodyParagraph, Button } from './BasicComponents';
 import V_2 from '../../images/figures/Vector-1.svg';
 import logo from '../../images/logo.svg';
 import size from '../utils/size';
@@ -136,6 +136,10 @@ export const Logo = styled(logo)`
   width: 60px;
   height: 60px;
 `;
+export const BigLogo = styled(logo)`
+  width: 100px;
+  height: 100px;
+`;
 export const MenuBar = styled.ul`
   list-style-type: none;
   display: flex;
@@ -228,4 +232,20 @@ export const Container = styled.section`
 export const OpenButton = styled(motion.button)`
   border: none;
   background-color: inherit;
+  outline: none;
+  cursor: pointer;
+`;
+
+export const LinksContainerColumn = styled(motion.ul)`
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+`;
+
+export const MenuButton = styled(Button)`
+  font-size: 14px;
 `;
