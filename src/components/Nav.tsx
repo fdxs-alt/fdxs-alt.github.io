@@ -87,7 +87,7 @@ const Nav = () => {
                 animate="animation"
                 transition={{ delay: 0.4, duration: 0.4 }}
               >
-                <MenuLink to="/blog" location={l ? l.pathname : ''}>
+                <MenuLink to="/Blog" location={l ? l.pathname : ''}>
                   Blog
                 </MenuLink>
               </MenuItem>
@@ -146,7 +146,7 @@ const Nav = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink to="/blog" location={l ? l.pathname : ''}>
+              <MenuLink to="/Blog" location={l ? l.pathname : ''}>
                 Blog
               </MenuLink>
             </MenuItem>
