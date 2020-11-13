@@ -1,22 +1,23 @@
+import { motion } from 'framer-motion';
+import size from '../../utils/size';
 import styled from 'styled-components';
-
-export const BlogCard = styled.div`
+import Lens from '../../../images/png/lens.png';
+export const BlogCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
+  width: 100%;
+  cursor: pointer;
   border-radius: 6px;
 
   border: 1px solid ${(props) => props.theme.colors.grey_4};
 `;
 
-export const BlogImage = styled.img`
-  width: 100%;
-`;
-
 export const ContentContainer = styled.div`
   padding: 16px 24px;
+  background-color: ${(props) => props.theme.colors.white};
+  width: 100%;
 `;
 
 export const DateTitle = styled.div`
@@ -34,6 +35,29 @@ export const Tag = styled.div`
 
 export const TagContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 50%);
   gap: 5px;
+
+  @media (max-width: ${size.laptop}) {
+    grid-template-columns: repeat(3, 33%);
+  }
 `;
+
+export const ImageWrapper = styled.div<IImage>`
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.primary};
+  background-image: url(${Lens});
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: ${(props) => (props.hovered ? 10 : -10)};
+`;
+export const BlogImage = styled.img<IImage>`
+  width: 100%;
+  transition: 300ms ease-out;
+  opacity: ${(props) => (props.hovered ? 0.3 : 1)};
+  z-index: 100;
+`;
+
+interface IImage {
+  hovered: boolean;
+}

@@ -8,8 +8,10 @@ import {
   HelloBlock,
   HelloBodyParagrap,
 } from '../styles/Main';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const Approve = styled.img`
+const Approve = styled(motion.img)`
   width: 40%;
 
   @media (max-width: ${size.tablet}) {
@@ -19,11 +21,28 @@ const Approve = styled.img`
 `;
 
 const Warranty = () => {
+  const { inView, ref } = useInView({ triggerOnce: true });
+
   return (
     <Wrapper>
-      <HelloProgrammerSection>
-        <Approve src={ApproveVector} />
-        <HelloBlock>
+      <HelloProgrammerSection ref={ref}>
+        <Approve
+          src={ApproveVector}
+          animate={{ x: inView ? 0 : '-200%' }}
+          initial={{ x: '-200%' }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+          }}
+        />
+        <HelloBlock
+          animate={{ x: inView ? 0 : '200%' }}
+          initial={{ x: '200%' }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+          }}
+        >
           <HeaderBig bold>Gwarancja jakości</HeaderBig>
           <HelloBodyParagrap>
             Jeśli w przeciągu roku od zakupu zechcesz zrezygnować z nauki

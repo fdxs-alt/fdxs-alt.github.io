@@ -13,6 +13,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-typescript',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gladiators of JS`,
+        short_name: `Gladiators`,
+        start_url: `/`,
+        description: `Gladiators page`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/gatsby-icon.png`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-eslint',
       options: {
         test: /\.js$|\.jsx$|\.ts$|\.tsx$/,

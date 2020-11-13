@@ -6,36 +6,26 @@ import {
   DateTitle,
   TagContainer,
   Tag,
+  BlogImage,
+  ImageWrapper,
 } from '../styles/Blog/CardComponent';
 import BG from '../../images/png/bg.png';
 import useHover from '../utils/useHover';
-import styled from 'styled-components';
-import Lens from '../../images/png/lens.png';
-interface IImage {
-  hovered: boolean;
-}
+import { useInView } from 'react-intersection-observer';
+import { navigate } from 'gatsby';
 
-const ImageWrapper = styled.div<IImage>`
-  width: 100%;
-  background-color: ${(props) => props.theme.colors.primary};
-  background-image: url(${Lens});
-  background-position: center;
-  background-repeat: no-repeat;
-  max-height: 216px;
-  z-index: ${(props) => (props.hovered ? 10 : -10)};
-`;
-export const BlogImage = styled.img<IImage>`
-  width: 100%;
-  max-height: 220px;
-  transition: 300ms ease-out;
-  opacity: ${(props) => (props.hovered ? 0.3 : 1)};
-`;
 const Card = () => {
   const { ref, isHovered } = useHover();
-
+  const { ref: viewRef, inView } = useInView({ triggerOnce: true });
   return (
-    <BlogCard ref={ref}>
-      <ImageWrapper hovered={isHovered}>
+    <BlogCard
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: inView ? 1 : 0 }}
+      transition={{ delay: 0.2, duration: 0.3 }}
+      onClick={() => navigate('/example')}
+    >
+      <ImageWrapper hovered={isHovered} ref={viewRef}>
         <BlogImage src={BG} hovered={isHovered} />
       </ImageWrapper>
       <ContentContainer>

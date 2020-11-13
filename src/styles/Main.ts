@@ -130,7 +130,6 @@ export const Navbar = styled(motion.nav)`
   width: 100%;
   padding: 1rem;
   align-items: center;
-  position: relative;
 `;
 
 export const Logo = styled(logo)`

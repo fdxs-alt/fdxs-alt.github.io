@@ -25,7 +25,6 @@ export const HeaderBig = styled(motion.h1)<IHeaderVariants>`
 
   @media (max-width: ${size.tablet}) {
     text-align: center;
-    font-size: 22px;
   }
 `;
 export const HeaderMedium = styled.h1<IHeaderVariants>`

@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import size from '../../utils/size';
 
-export const OpinionWrapper = styled.div`
+export const OpinionWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 50%;
