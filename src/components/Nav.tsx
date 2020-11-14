@@ -74,7 +74,7 @@ const Nav = () => {
                 animate="animation"
                 transition={{ delay: 0.4, duration: 0.4 }}
               >
-                <MenuLink to="/about" location={l ? l.pathname : ''}>
+                <MenuLink to="/development" location={l ? l.pathname : ''}>
                   O mnie
                 </MenuLink>
               </MenuItem>
@@ -100,7 +100,7 @@ const Nav = () => {
                 transition={{ delay: 0.4, duration: 0.4 }}
               >
                 <MenuLink
-                  to="/contact"
+                  to="/development"
                   location={l ? l.pathname : ''}
                   style={{ marginBottom: '2em' }}
                 >
