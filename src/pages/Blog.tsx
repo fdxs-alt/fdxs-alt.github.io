@@ -69,7 +69,7 @@ const VectorTwo = styled(V_2)`
   }
   z-index: -100;
 `;
-const Blog = () => {
+const blog = () => {
   return (
     <Layout>
       <Container>
@@ -98,4 +98,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default blog;
