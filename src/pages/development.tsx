@@ -11,6 +11,7 @@ const CenteredWrapper = styled.div`
   overflow: hidden;
   align-items: center;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
 `;
 const Container = styled.div`
   display: flex;
@@ -18,7 +19,6 @@ const Container = styled.div`
 `;
 
 const GoBackLink = styled(Link)`
-  color: ${(props) => props.theme.colors.grey_1};
   font-weight: 700;
   font-size: 20px;
 `;
