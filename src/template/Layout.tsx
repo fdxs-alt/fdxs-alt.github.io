@@ -1,15 +1,12 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { Container, Wrapper } from '../styles/BasicComponents';
-import GlobalStyling from '../styles/styled-components/Global';
-import theme from '../styles/styled-components/theme';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>
@@ -17,7 +14,6 @@ const Layout: React.FC = ({ children }) => {
         </title>
         <link rel="canonical" href="https://gladiators.netlify.app/" />
       </Helmet>
-      <GlobalStyling />
       <Container>
         <Wrapper>
           <Nav />
@@ -25,7 +21,7 @@ const Layout: React.FC = ({ children }) => {
         {children}
         <Footer />
       </Container>
-    </ThemeProvider>
+    </>
   );
 };
 

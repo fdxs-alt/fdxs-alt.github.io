@@ -23,14 +23,14 @@ const Card = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ delay: 0.2, duration: 0.3 }}
-      onClick={() => navigate('/example')}
+      onClick={() => navigate('/blog/example')}
     >
       <ImageWrapper hovered={isHovered} ref={viewRef}>
         <BlogImage src={BG} hovered={isHovered} />
       </ImageWrapper>
       <ContentContainer>
         <DateTitle>10.11.2020</DateTitle>
-        <HeaderSmall style={{ marginTop: '1em' }}>
+        <HeaderSmall style={{ marginTop: '1em', fontSize: '16px' }} bold>
           Brainstorm w sprawie ulepszenia gladiatorów i szereg nowych zasad
         </HeaderSmall>
         <BodyParagraph sm>

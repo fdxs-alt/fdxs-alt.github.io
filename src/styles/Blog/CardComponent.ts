@@ -10,7 +10,6 @@ export const BlogCard = styled(motion.div)`
   width: 100%;
   cursor: pointer;
   border-radius: 6px;
-
   border: 1px solid ${(props) => props.theme.colors.grey_4};
 `;
 
@@ -31,6 +30,7 @@ export const Tag = styled.div`
   color: ${(props) => props.theme.colors.grey_2};
   border: 1px solid ${(props) => props.theme.colors.grey_4};
   padding: 6px 12px;
+  font-size: 14px;
 `;
 
 export const TagContainer = styled.div`

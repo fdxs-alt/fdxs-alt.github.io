@@ -84,7 +84,12 @@ const Nav = () => {
                 animate="animation"
                 transition={{ delay: 0.4, duration: 0.4 }}
               >
-                <MenuLink to="/Blog" location={l ? l.pathname : ''}>
+                <MenuLink
+                  to="/blog"
+                  location={
+                    l ? (l.pathname.includes('/blog') ? '/blog' : '') : ''
+                  }
+                >
                   Blog
                 </MenuLink>
               </MenuItem>
@@ -138,17 +143,22 @@ const Nav = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink to="/about" location={l ? l.pathname : ''}>
+              <MenuLink to="/development" location={l ? l.pathname : ''}>
                 O mnie
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink to="/Blog" location={l ? l.pathname : ''}>
+              <MenuLink
+                to="/blog"
+                location={
+                  l ? (l.pathname.includes('/blog') ? '/blog' : '') : ''
+                }
+              >
                 Blog
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink to="/contact" location={l ? l.pathname : ''}>
+              <MenuLink to="/development" location={l ? l.pathname : ''}>
                 Kontakt
               </MenuLink>
             </MenuItem>

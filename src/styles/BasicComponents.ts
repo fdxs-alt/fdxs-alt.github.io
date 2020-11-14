@@ -38,6 +38,7 @@ export const HeaderSmall = styled.h1<IHeaderVariants>`
   margin-bottom: 16px;
   text-align: ${(props) => (props.centered ? 'center' : 'start')};
   line-height: 24px;
+  line-height: 130%;
 `;
 export const BodyParagraph = styled.p<IBodyVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};

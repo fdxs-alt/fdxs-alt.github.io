@@ -165,6 +165,10 @@ export const MenuLink = styled(Link)<IMenuLink>`
   :hover {
     color: ${(props) => props.theme.colors.secondary};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 export const HelloProgrammerSection = styled.section`
