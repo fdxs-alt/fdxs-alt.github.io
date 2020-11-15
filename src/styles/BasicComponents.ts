@@ -86,7 +86,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   width: 60%;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto 150px auto;
 
   @media (max-width: ${size.laptop}) {

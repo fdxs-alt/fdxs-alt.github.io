@@ -1,136 +1,38 @@
 import React from 'react';
 import Layout from '../../template/Layout';
-import styled from 'styled-components';
 import {
   BodyParagraph,
   HeaderMedium,
-  HeaderSmall,
   Wrapper,
 } from '../../styles/BasicComponents';
-import ListIcon from '../../../images/icons/menu_icon.svg';
-import { DateTitle, Tag } from '../../styles/Blog/CardComponent';
-import size from '../../utils/size';
-import Image from '../../../images/png/bg.png';
-import { IconContainer } from '../../styles/Main';
+import { DateTitle } from '../../styles/Blog/CardComponent';
+import { Bold, IconContainer } from '../../styles/Main';
 import CoffeeCup from '../../../images/icons/coffee-cup.svg';
 import DoubleCoffeeCup from '../../../images/icons/coffee-double.svg';
-const ContentWrapper = styled.div`
-  width: 100%;
-  max-width: 600px;
-`;
+import { ContactInput, Label } from '../../styles/Home/ContactComponent';
+import {
+  CoffeContainer,
+  CoffeIconsContainer,
+  ExtraInfoWrapper,
+  Info,
+  InnerCoffeeContent,
+  JoinHeader,
+  JoinParagraph,
+  JoinWrapper,
+  List,
+  ListDot,
+  ListEl,
+  NewsletterSpacedBetweenContainer,
+  NewsletterWrapper,
+  PostHeader,
+  PostParagraph,
+  PostTag,
+  WhiteHeader,
+  ContentWrapper,
+  SendButton,
+  TagContainer,
+} from '../../styles/ExamplePost';
 
-const PostHeader = styled(HeaderSmall)`
-  margin: 16px 0;
-`;
-
-const PostParagraph = styled(BodyParagraph)`
-  margin: 16px 0;
-  color: ${(props) => props.theme.colors.grey_2};
-`;
-
-const List = styled.ul`
-  list-style: none;
-  margin: 16px 0;
-  color: ${(props) => props.theme.colors.grey_2};
-  font-size: 16px;
-`;
-
-const ListEl = styled.li`
-  margin-bottom: 16px;
-`;
-
-const ListDot = styled(ListIcon)`
-  margin-right: 12px;
-`;
-
-const ExtraInfoWrapper = styled.div`
-  width: 100%;
-  position: relative;
-  min-height: 500px;
-  display: flex;
-  align-items: flex-end;
-  &::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -100;
-    height: 100%;
-    background: url(${Image});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media (max-width: ${size.tablet}) {
-    min-height: 400px;
-  }
-
-  @media (max-width: ${size.small}) {
-    min-height: 300px;
-    align-items: center;
-  }
-`;
-
-const Info = styled.div`
-  width: 50%;
-  padding: 24px;
-
-  @media (max-width: ${size.tablet}) {
-    width: 80%;
-  }
-
-  @media (max-width: ${size.small}) {
-    height: unset;
-  }
-`;
-const WhiteHeader = styled(HeaderMedium)`
-  color: ${(props) => props.theme.colors.white};
-  margin: 16px 0;
-
-  @media (max-width: ${size.small}) {
-    font-size: 22px;
-  }
-`;
-const PostTag = styled(Tag)`
-  color: ${(props) => props.theme.colors.grey_5};
-  border: 1px solid ${(props) => props.theme.colors.grey_3};
-  font-size: 16px;
-  @media (max-width: ${size.small}) {
-    font-size: 14px;
-  }
-`;
-
-const TagContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-
-  @media (max-width: ${size.laptop}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`;
-
-const CoffeContainer = styled.div`
-  width: 100%;
-  box-shadow: 0px 5px 11px 0px rgba(131, 128, 168, 0.14),
-    0px 10px 92px 0px rgba(210, 207, 238, 0.2);
-
-  padding: 50px;
-  border: 1px solid ${(props) => props.theme.colors.grey_4};
-  border-radius: 4px;
-  margin-bottom: 50px;
-`;
-const InnerCoffeeContent = styled.div`
-  width: 50%;
-  margin: auto;
-`;
-const CoffeIconsContainer = styled.div`
-  display: flex;
-  margin-top: 50px;
-  justify-content: space-around;
-`;
 const example = () => {
   return (
     <Layout>
@@ -213,8 +115,9 @@ const example = () => {
               Do następnego commita!
             </HeaderMedium>
             <BodyParagraph centered>
-              Jeśli dowiedziałeś czegoś konkretnego z tego posta, to postaw mi
-              kawę, która zasili kolejne posty z materiałami dla programistów!
+              Jeśli dowiedziałeś czegoś konkretnego z tego posta, to
+              <Bold> postaw mi kawę</Bold>, która zasili kolejne posty z
+              materiałami dla programistów!
             </BodyParagraph>
             <CoffeIconsContainer>
               <IconContainer>
@@ -226,7 +129,35 @@ const example = () => {
             </CoffeIconsContainer>
           </InnerCoffeeContent>
         </CoffeContainer>
-        <CoffeContainer></CoffeContainer>
+        <CoffeContainer>
+          <NewsletterSpacedBetweenContainer>
+            <JoinWrapper>
+              <JoinHeader bold>
+                Dołącz do listy mailingowej Gladiatorów Javascriptu!
+              </JoinHeader>
+              <JoinParagraph>
+                Będziesz otrzymywać linki do zajęć z Gladiatorami, przydatne do
+                nauki artykuły oraz informacje odnośnie aktualizacji zbiorów.
+              </JoinParagraph>
+            </JoinWrapper>
+            <NewsletterWrapper>
+              <Label htmlFor="email">Twój adres email</Label>
+              <ContactInput
+                type="email"
+                required
+                placeholder="np. jan@kowalski.pl"
+              />
+              <SendButton primary type="button" style={{ width: '100%' }}>
+                Wyślij wiadomość
+              </SendButton>
+              <BodyParagraph style={{ fontSize: '12px', marginTop: '16px' }}>
+                * Zapisując się do newslettera zgadzasz się na przetwarzanie
+                swoich informacji osobowych zgodnie z naszą Polityką
+                Prywatności.
+              </BodyParagraph>
+            </NewsletterWrapper>
+          </NewsletterSpacedBetweenContainer>
+        </CoffeContainer>
       </Wrapper>
     </Layout>
   );
