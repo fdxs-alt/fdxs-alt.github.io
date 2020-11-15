@@ -31,6 +31,7 @@ export const HeaderMedium = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
   font-size: 26px;
   margin-bottom: 10px;
+  text-align: ${(props) => (props.centered ? 'center' : 'start')};
 `;
 export const HeaderSmall = styled.h1<IHeaderVariants>`
   font-weight: ${(props) => (props.bold ? '700' : '400')};
