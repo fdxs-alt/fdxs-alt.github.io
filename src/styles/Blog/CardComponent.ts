@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Lens from '../../../images/png/lens.png';
 export const BlogCard = styled(motion.div)`
   display: flex;
+  margin-top: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -50,12 +51,18 @@ export const ImageWrapper = styled.div<IImage>`
   background-position: center;
   background-repeat: no-repeat;
   z-index: ${(props) => (props.hovered ? 10 : -10)};
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 `;
 export const BlogImage = styled.img<IImage>`
   width: 100%;
+  height: 100%;
   transition: 300ms ease-out;
+  object-fit: cover;
   opacity: ${(props) => (props.hovered ? 0.3 : 1)};
   z-index: 100;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 `;
 
 interface IImage {

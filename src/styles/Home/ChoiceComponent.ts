@@ -51,9 +51,20 @@ export const PriceInfo = styled.div`
 
 export const BookCard = styled(Card)`
   padding: 1.7rem;
-  box-shadow: 0px 5px 11.519827842712402px 0px rgba(131, 128, 168, 0.14),
+  width: 31%;
+  box-shadow: 0px 5px 11px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
   justify-content: space-between;
+
+  @media (max-width: ${size.tablet}) {
+    width: 80%;
+    margin-bottom: 2em;
+    min-height: unset;
+  }
+
+  @media (max-width: ${size.mobile}) {
+    width: 90%;
+  }
 `;
 
 export const LinedParagraph = styled(BodyParagraph)`
@@ -62,6 +73,8 @@ export const LinedParagraph = styled(BodyParagraph)`
 `;
 
 export const BookCardsWrapper = styled(SpaceBetweenContainer)`
+  padding: 0.6rem;
+
   @media (max-width: ${size.tablet}) {
     flex-direction: column;
     align-items: center;

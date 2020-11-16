@@ -17,7 +17,7 @@ const BlogGrid = styled.section`
   width: 100%;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(4, 25%);
-  gap: 1em;
+  column-gap: 1rem;
   @media (max-width: ${size.laptop}) {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(6, 16.5%);
