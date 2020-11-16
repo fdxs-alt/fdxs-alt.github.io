@@ -74,7 +74,6 @@ export const Avatar = styled.img`
 
 export const Container = styled.div`
   width: 100%;
-  overflow: hidden;
 `;
 
 export const SpaceBetweenContainer = styled.div`
@@ -88,7 +87,7 @@ export const Wrapper = styled.section`
   width: 60%;
   max-width: 1000px;
   margin: 0 auto 150px auto;
-
+  overflow: hidden;
   @media (max-width: ${size.laptop}) {
     width: 75%;
   }
@@ -108,4 +107,5 @@ export const FlexEndWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: relative;
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../template/Layout';
 import {
   BodyParagraph,
+  FlexEndWrapper,
   HeaderMedium,
   Wrapper,
 } from '../../styles/BasicComponents';
@@ -31,11 +32,34 @@ import {
   ContentWrapper,
   SendButton,
   TagContainer,
+  PrevPostContent,
+  NextPostContent,
+  PointerArrows,
 } from '../../styles/ExamplePost';
+import { VectorOne, VectorTwo as Vector2 } from '../blog';
+import Vector from '../../../images/figures/Vector-2.svg';
+import styled from 'styled-components';
 
+const VectorTwo = styled(Vector2)`
+  @media (max-width: 950px) {
+    display: none;
+  }
+`;
+const VectorThree = styled(Vector)`
+  position: absolute;
+  max-width: 300px;
+  top: -300px;
+  @media (max-width: 950px) {
+    display: none;
+  }
+  z-index: -100;
+`;
 const example = () => {
   return (
     <Layout>
+      <FlexEndWrapper>
+        <VectorOne />
+      </FlexEndWrapper>
       <Wrapper>
         <ExtraInfoWrapper>
           <Info>
@@ -158,7 +182,23 @@ const example = () => {
             </NewsletterWrapper>
           </NewsletterSpacedBetweenContainer>
         </CoffeContainer>
+        <PointerArrows>
+          <PrevPostContent>
+            <p style={{ width: '310px', padding: '8px', textAlign: 'center' }}>
+              Brainstorm w sprawie ulepszenia gladiatorów i szereg nowych zasad
+            </p>
+          </PrevPostContent>
+          <NextPostContent>
+            <p style={{ width: '310px', padding: '8px', textAlign: 'center' }}>
+              Brainstorm w sprawie ulepszenia gladiatorów i szereg nowych zasad
+            </p>
+          </NextPostContent>
+        </PointerArrows>
       </Wrapper>
+      <VectorTwo />
+      <FlexEndWrapper>
+        <VectorThree />
+      </FlexEndWrapper>
     </Layout>
   );
 };

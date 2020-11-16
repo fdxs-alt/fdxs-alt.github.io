@@ -127,9 +127,23 @@ export const CardText = styled(BodyParagraph)`
 export const Navbar = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 60%;
+  max-width: 1000px;
   padding: 1rem;
   align-items: center;
+  margin: auto;
+
+  @media (max-width: ${size.laptop}) {
+    width: 75%;
+  }
+
+  @media (max-width: ${size.tablet}) {
+    width: 80%;
+  }
+
+  @media (max-width: ${size.small}) {
+    width: 90%;
+  }
 `;
 
 export const Logo = styled(logo)`

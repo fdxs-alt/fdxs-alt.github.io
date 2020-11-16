@@ -51,23 +51,23 @@ const BlogWrapper = styled.section`
   }
 `;
 
-const VectorOne = styled(V_1)`
+export const VectorOne = styled(V_1)`
   position: absolute;
   max-width: 375px;
-  top: 0;
+  margin-top: 0;
   @media (max-width: ${size.tablet}) {
     display: none;
   }
-  z-index: -100;
+  z-index: -1000;
 `;
-const VectorTwo = styled(V_2)`
+export const VectorTwo = styled(V_2)`
   position: absolute;
   width: 375px;
-  margin-top: -60%;
+  margin-top: -80%;
   @media (max-width: ${size.tablet}) {
     display: none;
   }
-  z-index: -100;
+  z-index: -1000;
 `;
 const blog = () => {
   return (
@@ -76,7 +76,6 @@ const blog = () => {
         <FlexEndWrapper>
           <VectorOne />
         </FlexEndWrapper>
-
         <BlogWrapper>
           <HeaderBig centered bold>
             Witaj na Blogu!

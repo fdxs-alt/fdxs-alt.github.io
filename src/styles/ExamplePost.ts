@@ -10,6 +10,8 @@ import {
 import { Tag } from './Blog/CardComponent';
 import ListIcon from '../../images/icons/menu_icon.svg';
 import Image from '../../images/png/bg.png';
+import Prev from '../../images/png/previous_post.png';
+import Next from '../../images/png/next_post.png';
 export const ContentWrapper = styled.div`
   width: 100%;
   max-width: 600px;
@@ -114,11 +116,12 @@ export const CoffeContainer = styled.div`
   width: 100%;
   box-shadow: 0px 5px 11px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
-
+  position: relative;
   padding: 50px;
   border: 1px solid ${(props) => props.theme.colors.grey_4};
   border-radius: 4px;
   margin-bottom: 50px;
+  background-color: ${(props) => props.theme.colors.white};
 
   @media (max-width: ${size.small}) {
     padding: 25px;
@@ -188,5 +191,90 @@ export const JoinParagraph = styled(BodyParagraph)`
 export const SendButton = styled(Button)`
   @media (max-width: ${size.small}) {
     width: fit-content;
+  }
+`;
+
+export const PrevPostContent = styled.div`
+  position: relative;
+  min-width: 360px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: ${(props) => props.theme.colors.white};
+  height: 95px;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    height: 100%;
+    background: url(${Prev});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media (max-width: 950px) {
+    min-width: unset;
+    margin-bottom: 20px;
+    align-self: center;
+    width: 450px;
+  }
+
+  @media (max-width: ${size.small}) {
+    width: 320px;
+    align-self: flex-end;
+    justify-self: flex-start;
+    height: 85px;
+    font-size: 14px;
+  }
+`;
+
+export const NextPostContent = styled.div`
+  position: relative;
+  min-width: 360px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 20px;
+  height: 95px;
+  font-size: 16px;
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.grey_1};
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    height: 100%;
+    background: url(${Next});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 950px) {
+    min-width: unset;
+    justify-self: flex-end;
+    align-self: center;
+    width: 450px;
+  }
+
+  @media (max-width: ${size.small}) {
+    width: 320px;
+    height: 85px;
+    align-self: flex-start;
+
+    font-size: 14px;
+  }
+`;
+export const PointerArrows = styled(SpaceBetweenContainer)`
+  @media (max-width: 950px) {
+    flex-direction: column;
   }
 `;
