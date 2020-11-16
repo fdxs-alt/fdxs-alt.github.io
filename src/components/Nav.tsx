@@ -45,10 +45,11 @@ const Nav = () => {
           <Modal isOpen={open}>
             <LinksContainerColumn>
               <OpenButton
+                name="open"
                 onClick={() => setOpen((prev) => !prev)}
                 style={{ alignSelf: 'flex-end', justifySelf: 'flex-start' }}
               >
-                <CloseButton style={{ width: '40px' }} />
+                <CloseButton style={{ width: '40px' }} name="close" />
               </OpenButton>
               <motion.div
                 variants={variants}
@@ -109,6 +110,7 @@ const Nav = () => {
               </MenuItem>
               <MenuButton
                 primary
+                name="join"
                 variants={variants}
                 initial="initial_2"
                 animate="animation"
@@ -123,6 +125,7 @@ const Nav = () => {
             onClick={() => setOpen((prev) => !prev)}
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: '0' }}
+            name="open"
             transition={{
               type: 'spring',
               stiffness: 90,
@@ -135,7 +138,9 @@ const Nav = () => {
         )
       ) : (
         <SpaceBetweenContainer>
-          <Button primary>Zostań Gladiatorem JS</Button>
+          <Button primary name="join">
+            Zostań Gladiatorem JS
+          </Button>
           <MenuBar>
             <MenuItem>
               <MenuLink to="/" location={l ? l.pathname : ''}>

@@ -48,7 +48,12 @@ const Stepper: React.FC = ({ children }) => {
       {childrenArray[step]}
       <StepsWrapper>
         {[...Array(childrenArray.length).keys()].map((_, i: number) => (
-          <Step key={i} onClick={() => setStep(i)} selected={i === step} />
+          <Step
+            name={`step${i}`}
+            key={i}
+            onClick={() => setStep(i)}
+            selected={i === step}
+          />
         ))}
       </StepsWrapper>
     </OpinionsWrapper>

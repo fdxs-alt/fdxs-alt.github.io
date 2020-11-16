@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeaderBig, Wrapper } from '../styles/BasicComponents';
 import { CenteredBodyParagrap } from '../styles/Main';
-
 import CommentsVector from '../../images/png/comments.png';
 import {
   ContentWrapper,
@@ -33,6 +32,7 @@ const Contact = () => {
             duration: 0.3,
             delay: 0.2,
           }}
+          alt="comments"
         />
         <ContactForm
           animate={{ x: inView ? 0 : '200%' }}
@@ -56,7 +56,9 @@ const Contact = () => {
             required
             placeholder="np. jan@kowalski.pl"
           />
-          <SendButton primary>Wyślij wiadomość</SendButton>
+          <SendButton primary name="send">
+            Wyślij wiadomość
+          </SendButton>
         </ContactForm>
       </ContentWrapper>
     </Wrapper>

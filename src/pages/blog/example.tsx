@@ -171,7 +171,12 @@ const example = () => {
                 required
                 placeholder="np. jan@kowalski.pl"
               />
-              <SendButton primary type="button" style={{ width: '100%' }}>
+              <SendButton
+                primary
+                name="send"
+                type="button"
+                style={{ width: '100%' }}
+              >
                 Wyślij wiadomość
               </SendButton>
               <BodyParagraph style={{ fontSize: '12px', marginTop: '16px' }}>

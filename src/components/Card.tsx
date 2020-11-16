@@ -26,7 +26,7 @@ const Card = () => {
       onClick={() => navigate('/blog/example')}
     >
       <ImageWrapper hovered={isHovered} ref={viewRef}>
-        <BlogImage src={BG} hovered={isHovered} />
+        <BlogImage src={BG} hovered={isHovered} alt="background" />
       </ImageWrapper>
       <ContentContainer>
         <DateTitle>10.11.2020</DateTitle>

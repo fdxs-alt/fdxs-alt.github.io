@@ -34,6 +34,7 @@ const Warranty = () => {
             duration: 0.3,
             delay: 0.2,
           }}
+          alt="warranty"
         />
         <HelloBlock
           animate={{ x: inView ? 0 : '200%' }}
@@ -50,7 +51,9 @@ const Warranty = () => {
             programistą, a ja zwrócę Ci pieniądze – programowanie jest trudne i
             nie jest dla wszystkich i doskonale to rozumiem 🙂
           </HelloBodyParagrap>
-          <Button primary>Kliknij, aby sprawdzić!</Button>
+          <Button primary name="check">
+            Kliknij, aby sprawdzić!
+          </Button>
         </HelloBlock>
       </HelloProgrammerSection>
     </Wrapper>

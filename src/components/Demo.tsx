@@ -38,7 +38,9 @@ const Demo = () => {
           <HeaderSmall centered bold>
             21 zł
           </HeaderSmall>
-          <Button primary>Kliknij, aby zamówić!</Button>
+          <Button primary name="sendbtn">
+            Kliknij, aby zamówić!
+          </Button>
         </PrimaryBorderContainer>
       </Container>
     </DemoWrapper>

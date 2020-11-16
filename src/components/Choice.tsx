@@ -67,7 +67,9 @@ const Choice = () => {
         </BooksWrapper>
         <ButtonSpaceBetweenContainer>
           <CodeInput type="number" defaultValue="582413" />
-          <Button primary>Dołączam do Gladiatorów</Button>
+          <Button name="join" primary>
+            Dołączam do Gladiatorów
+          </Button>
         </ButtonSpaceBetweenContainer>
       </LightBorderContainer>
       <CenteredBodyParagrap marginbottom={6.2}>
@@ -85,7 +87,9 @@ const Choice = () => {
           </CardText>
           <HeaderMedium bold>120 zł</HeaderMedium>
           <LinedParagraph>150 zł</LinedParagraph>
-          <Button primary>Kliknij, aby zamówić!</Button>
+          <Button primary name="order">
+            Kliknij, aby zamówić!
+          </Button>
         </BookCard>
         <BookCard>
           <Yellow />
@@ -96,7 +100,9 @@ const Choice = () => {
 
           <HeaderMedium bold>120 zł</HeaderMedium>
           <LinedParagraph>150 zł</LinedParagraph>
-          <Button primary>Kliknij, aby zamówić!</Button>
+          <Button primary name="order">
+            Kliknij, aby zamówić!
+          </Button>
         </BookCard>
         <BookCard>
           <Green />

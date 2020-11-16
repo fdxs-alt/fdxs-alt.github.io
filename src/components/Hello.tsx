@@ -35,7 +35,9 @@ const Hello = () => {
           Tworzymy społeczność newbie i junior JS devów, którzy chcą wspólnie
           się uczyć, aby szybciej być gotowym na rynek.
         </HelloBodyParagrap>
-        <Button primary>Dołącz do Gladiatorów Javascriptu!</Button>
+        <Button primary name="join">
+          Dołącz do Gladiatorów Javascriptu!
+        </Button>
       </HelloBlock>
       <Sitting
         src={SittingVector}
@@ -45,6 +47,7 @@ const Hello = () => {
           duration: 0.3,
           delay: 0.2,
         }}
+        alt="sitting"
       />
     </HelloProgrammerSection>
   );
