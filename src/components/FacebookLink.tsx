@@ -6,6 +6,14 @@ export const ExternalLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   color: ${(props) => props.theme.colors.white};
+  outline: none;
+  width: 50px;
+  text-align: center;
+
+  &:focus {
+    border-radius: 6px;
+    border: 2px solid ${(props) => props.theme.colors.primary};
+  }
 `;
 
 const FacebookLink = () => {

@@ -174,7 +174,7 @@ export const MenuLink = styled(Link)<IMenuLink>`
   color: ${(props) => props.theme.colors.grey_1};
   font-weight: 700;
   transition: 200ms ease;
-
+  outline: none;
   &:focus,
   :hover {
     color: ${(props) => props.theme.colors.secondary};

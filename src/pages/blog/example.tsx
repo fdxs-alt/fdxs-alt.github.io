@@ -3,20 +3,14 @@ import Layout from '../../template/Layout';
 import {
   BodyParagraph,
   FlexEndWrapper,
-  HeaderMedium,
   Wrapper,
 } from '../../styles/BasicComponents';
 import { DateTitle } from '../../styles/Blog/CardComponent';
-import { Bold, IconContainer } from '../../styles/Main';
-import CoffeeCup from '../../../images/icons/coffee-cup.svg';
-import DoubleCoffeeCup from '../../../images/icons/coffee-double.svg';
 import { ContactInput, Label } from '../../styles/Home/ContactComponent';
 import {
   CoffeContainer,
-  CoffeIconsContainer,
   ExtraInfoWrapper,
   Info,
-  InnerCoffeeContent,
   JoinHeader,
   JoinParagraph,
   JoinWrapper,
@@ -32,13 +26,12 @@ import {
   ContentWrapper,
   SendButton,
   TagContainer,
-  PrevPostContent,
-  NextPostContent,
-  PointerArrows,
 } from '../../styles/ExamplePost';
-import { VectorOne, VectorTwo as Vector2 } from '../blog';
+import { VectorOne, VectorTwo as Vector2 } from '../../styles/Blog/Blog';
 import Vector from '../../../images/figures/Vector-2.svg';
 import styled from 'styled-components';
+import Arrow from '../../components/Arrow';
+import Coffee from '../../components/Coffee';
 
 const VectorTwo = styled(Vector2)`
   @media (max-width: 950px) {
@@ -133,26 +126,7 @@ const example = () => {
             sprint – to maraton
           </PostHeader>
         </ContentWrapper>
-        <CoffeContainer>
-          <InnerCoffeeContent>
-            <HeaderMedium bold centered>
-              Do następnego commita!
-            </HeaderMedium>
-            <BodyParagraph centered>
-              Jeśli dowiedziałeś czegoś konkretnego z tego posta, to
-              <Bold> postaw mi kawę</Bold>, która zasili kolejne posty z
-              materiałami dla programistów!
-            </BodyParagraph>
-            <CoffeIconsContainer>
-              <IconContainer>
-                <CoffeeCup />
-              </IconContainer>
-              <IconContainer>
-                <DoubleCoffeeCup />
-              </IconContainer>
-            </CoffeIconsContainer>
-          </InnerCoffeeContent>
-        </CoffeContainer>
+        <Coffee />
         <CoffeContainer>
           <NewsletterSpacedBetweenContainer>
             <JoinWrapper>
@@ -187,18 +161,7 @@ const example = () => {
             </NewsletterWrapper>
           </NewsletterSpacedBetweenContainer>
         </CoffeContainer>
-        <PointerArrows>
-          <PrevPostContent>
-            <p style={{ width: '310px', padding: '8px', textAlign: 'center' }}>
-              Brainstorm w sprawie ulepszenia gladiatorów i szereg nowych zasad
-            </p>
-          </PrevPostContent>
-          <NextPostContent>
-            <p style={{ width: '310px', padding: '8px', textAlign: 'center' }}>
-              Brainstorm w sprawie ulepszenia gladiatorów i szereg nowych zasad
-            </p>
-          </NextPostContent>
-        </PointerArrows>
+        <Arrow />
       </Wrapper>
       <VectorTwo />
       <FlexEndWrapper>

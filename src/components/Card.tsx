@@ -24,6 +24,7 @@ const Card = () => {
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ delay: 0.2, duration: 0.3 }}
       onClick={() => navigate('/blog/example')}
+      tabIndex={0}
     >
       <ImageWrapper hovered={isHovered} ref={viewRef}>
         <BlogImage src={BG} hovered={isHovered} alt="background" />

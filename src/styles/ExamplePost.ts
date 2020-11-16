@@ -12,6 +12,7 @@ import ListIcon from '../../images/icons/menu_icon.svg';
 import Image from '../../images/png/bg.png';
 import Prev from '../../images/png/previous_post.png';
 import Next from '../../images/png/next_post.png';
+import { motion } from 'framer-motion';
 export const ContentWrapper = styled.div`
   width: 100%;
   max-width: 600px;
@@ -112,7 +113,7 @@ export const TagContainer = styled.div`
   }
 `;
 
-export const CoffeContainer = styled.div`
+export const CoffeContainer = styled(motion.div)`
   width: 100%;
   box-shadow: 0px 5px 11px 0px rgba(131, 128, 168, 0.14),
     0px 10px 92px 0px rgba(210, 207, 238, 0.2);
@@ -194,10 +195,11 @@ export const SendButton = styled(Button)`
   }
 `;
 
-export const PrevPostContent = styled.div`
+export const PrevPostContent = styled(motion.div)`
   position: relative;
   min-width: 360px;
   display: flex;
+  cursor: pointer;
   justify-content: flex-end;
   align-items: center;
   font-size: 16px;
@@ -217,6 +219,12 @@ export const PrevPostContent = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  &:focus {
+    outline: none;
+    color: ${(props) => props.theme.colors.primary};
+  }
+
   @media (max-width: 950px) {
     min-width: unset;
     margin-bottom: 20px;
@@ -233,13 +241,14 @@ export const PrevPostContent = styled.div`
   }
 `;
 
-export const NextPostContent = styled.div`
+export const NextPostContent = styled(motion.div)`
   position: relative;
   min-width: 360px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   line-height: 20px;
+  cursor: pointer;
   height: 95px;
   font-size: 16px;
   font-weight: 700;
@@ -258,6 +267,10 @@ export const NextPostContent = styled.div`
     background-size: cover;
   }
 
+  &:focus {
+    outline: none;
+    color: ${(props) => props.theme.colors.grey_2};
+  }
   @media (max-width: 950px) {
     min-width: unset;
     justify-self: flex-end;

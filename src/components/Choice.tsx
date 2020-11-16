@@ -26,8 +26,10 @@ import {
   ButtonSpaceBetweenContainer,
   CodeInput,
 } from '../styles/Home/ChoiceComponent';
+import { useInView } from 'react-intersection-observer';
 
 const Choice = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <Wrapper>
       <HeaderBig bold centered>
@@ -76,8 +78,12 @@ const Choice = () => {
         Jeśli wiesz, że jesteś kozakiem programowania i chciałbyś podjąć próbę
         nauki samodzielnie to możesz sprawdzić zbiory oddzielnie
       </CenteredBodyParagrap>
-      <BookCardsWrapper>
-        <BookCard>
+      <BookCardsWrapper ref={ref}>
+        <BookCard
+          animate={{ opacity: inView ? 1 : 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+        >
           <Red />
           <HeaderSmall bold centered>
             Nieprzewidziane i sprawiające problemy testy JS i React
@@ -91,7 +97,11 @@ const Choice = () => {
             Kliknij, aby zamówić!
           </Button>
         </BookCard>
-        <BookCard>
+        <BookCard
+          animate={{ opacity: inView ? 1 : 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+        >
           <Yellow />
           <HeaderSmall bold centered>
             Ambitne i wymagające zadania z JS i React
@@ -104,7 +114,11 @@ const Choice = () => {
             Kliknij, aby zamówić!
           </Button>
         </BookCard>
-        <BookCard>
+        <BookCard
+          animate={{ opacity: inView ? 1 : 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+        >
           <Green />
           <HeaderSmall bold centered>
             Rozwijające i utrwalające zadania z HTML, CSS i JS

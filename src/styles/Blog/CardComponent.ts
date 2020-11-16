@@ -12,6 +12,10 @@ export const BlogCard = styled(motion.div)`
   cursor: pointer;
   border-radius: 6px;
   border: 1px solid ${(props) => props.theme.colors.grey_4};
+  outline: none;
+  &:focus {
+    border: 1px solid ${(props) => props.theme.colors.grey_2};
+  }
 `;
 
 export const ContentContainer = styled.div`

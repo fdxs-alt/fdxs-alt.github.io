@@ -61,7 +61,7 @@ const FooterLink = styled(Link)`
   padding: 0.6rem 0;
   margin-bottom: 6px 0;
   transition: 200ms ease;
-
+  outline: none;
   &:focus,
   :hover {
     color: ${(props) => props.theme.colors.primary};

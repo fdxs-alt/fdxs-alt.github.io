@@ -9,5 +9,6 @@ export const Decorated = styled.b`
 export const SolutionHeader = styled(HeaderMedium)`
   width: 40%;
   text-align: center;
+  line-height: 120%;
   margin: 0;
 `;

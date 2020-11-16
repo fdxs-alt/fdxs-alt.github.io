@@ -37,6 +37,11 @@ const Step = styled.button<IStep>`
     props.selected ? props.theme.colors.primary : props.theme.colors.white};
   cursor: pointer;
   outline: none;
+
+  &:focus {
+    border-width: 2px;
+    border-color: ${(props) => props.theme.colors.grey_1};
+  }
 `;
 
 const Stepper: React.FC = ({ children }) => {

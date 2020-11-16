@@ -61,9 +61,17 @@ export const Button = styled(motion.button)<IButtonVariant>`
   font-weight: 700;
   border: ${(props) =>
     props.primary ? 'none' : `1 px solid ${props.theme.colors.grey_3}`};
-  color: ${(props) =>
-    props.primary ? props.theme.colors.grey_1 : props.theme.colors.grey_1};
   cursor: pointer;
+
+  &:hover {
+    color: ${(props) =>
+      props.primary ? props.theme.colors.grey_2 : props.theme.colors.grey_3};
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid ${(props) => props.theme.colors.grey_1};
+  }
 `;
 export const Avatar = styled.img`
   width: 90px;
@@ -76,7 +84,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const SpaceBetweenContainer = styled.div`
+export const SpaceBetweenContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
 `;
