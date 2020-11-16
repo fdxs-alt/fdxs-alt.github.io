@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   FlexEndWrapper,
@@ -13,8 +13,30 @@ import {
   BlogGrid,
   VectorTwo,
 } from '../styles/Blog/Blog';
+import styled from 'styled-components';
+
+const SortTittle = styled.div`
+  font-size: 16px;
+  font-weight: 700;
+`;
+
+const SortList = styled.ul`
+  list-style-type: none;
+
+  &:hover {
+    li {
+      display: block;
+    }
+  }
+`;
+
+const SortElement = styled.li`
+  display: none;
+`;
 
 const blog = () => {
+  const [selected, setSelected] = useState('od najnowszego');
+
   return (
     <Layout>
       <Container>
@@ -29,7 +51,20 @@ const blog = () => {
             Tutaj odnajdziesz wszystkie informacje o spółeczności Gladiatorów
             Javascriptu
           </CenteredBodyParagrap>
-
+          <FlexEndWrapper>
+            <SortList>
+              <SortTittle>Sortuj według: {selected}</SortTittle>
+              <SortElement onClick={() => setSelected('od najnowszego')}>
+                od najnowszego
+              </SortElement>
+              <SortElement
+                value="od najstarszego"
+                onClick={() => setSelected('od najstraszego')}
+              >
+                od najstarszego
+              </SortElement>
+            </SortList>
+          </FlexEndWrapper>
           <BlogGrid>
             {[...Array(12).keys()].map((_, i: number) => (
               <Card key={i} />
