@@ -26,14 +26,14 @@ import {
   ContentWrapper,
   SendButton,
   TagContainer,
-} from '../../styles/ExamplePost';
+  BackToBlog,
+} from '../../styles/Blog/ExamplePost';
 import { VectorOne, VectorTwo as Vector2 } from '../../styles/Blog/Blog';
 import Vector from '../../../images/figures/Vector-2.svg';
 import styled from 'styled-components';
 import Arrow from '../../components/Arrow';
 import Coffee from '../../components/Coffee';
 import Back from '../../../images/icons/back.svg';
-import { Link } from 'gatsby';
 const VectorTwo = styled(Vector2)`
   @media (max-width: 950px) {
     display: none;
@@ -49,21 +49,6 @@ const VectorThree = styled(Vector)`
   z-index: -100;
 `;
 
-const BackToBlog = styled(Link)`
-  display: flex;
-  font-size: 16px;
-  font-weight: 700;
-  align-items: center;
-  margin-bottom: 16px;
-  padding: 0 24px;
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.grey_1};
-  outline: none;
-  &:hover,
-  :focus {
-    color: ${(props) => props.theme.colors.grey_2};
-  }
-`;
 const example = () => {
   return (
     <Layout>

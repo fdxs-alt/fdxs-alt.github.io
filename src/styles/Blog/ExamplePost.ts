@@ -1,4 +1,5 @@
-import size from '../utils/size';
+import { Link } from 'gatsby';
+import size from '../../utils/size';
 import styled from 'styled-components';
 import {
   HeaderSmall,
@@ -6,12 +7,12 @@ import {
   HeaderMedium,
   SpaceBetweenContainer,
   Button,
-} from './BasicComponents';
-import { Tag } from './Blog/CardComponent';
-import ListIcon from '../../images/icons/menu_icon.svg';
-import Image from '../../images/png/bg.png';
-import Prev from '../../images/png/previous_post.png';
-import Next from '../../images/png/next_post.png';
+} from '../BasicComponents';
+import { Tag } from './CardComponent';
+import ListIcon from '../../../images/icons/menu_icon.svg';
+import Image from '../../../images/png/bg.png';
+import Prev from '../../../images/png/previous_post.png';
+import Next from '../../../images/png/next_post.png';
 import { motion } from 'framer-motion';
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -289,5 +290,21 @@ export const NextPostContent = styled(motion.div)`
 export const PointerArrows = styled(SpaceBetweenContainer)`
   @media (max-width: 950px) {
     flex-direction: column;
+  }
+`;
+
+export const BackToBlog = styled(Link)`
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 24px;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.grey_1};
+  outline: none;
+  &:hover,
+  :focus {
+    color: ${(props) => props.theme.colors.grey_2};
   }
 `;

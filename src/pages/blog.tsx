@@ -12,27 +12,14 @@ import {
   BlogWrapper,
   BlogGrid,
   VectorTwo,
+  SelectedSort,
+  SortContainer,
+  SortedElement,
+  SortedList,
+  SortedWrapper,
+  SortTittle,
 } from '../styles/Blog/Blog';
-import styled from 'styled-components';
-
-const SortTittle = styled.div`
-  font-size: 16px;
-  font-weight: 700;
-`;
-
-const SortList = styled.ul`
-  list-style-type: none;
-
-  &:hover {
-    li {
-      display: block;
-    }
-  }
-`;
-
-const SortElement = styled.li`
-  display: none;
-`;
+import Down from '../../images/icons/down.svg';
 
 const blog = () => {
   const [selected, setSelected] = useState('od najnowszego');
@@ -52,18 +39,28 @@ const blog = () => {
             Javascriptu
           </CenteredBodyParagrap>
           <FlexEndWrapper>
-            <SortList>
-              <SortTittle>Sortuj według: {selected}</SortTittle>
-              <SortElement onClick={() => setSelected('od najnowszego')}>
-                od najnowszego
-              </SortElement>
-              <SortElement
-                value="od najstarszego"
-                onClick={() => setSelected('od najstraszego')}
-              >
-                od najstarszego
-              </SortElement>
-            </SortList>
+            <SortContainer tabIndex={0}>
+              <SortedWrapper>
+                <SortTittle>Sortuj według:</SortTittle>
+                <SelectedSort>
+                  {selected} <Down />
+                </SelectedSort>
+              </SortedWrapper>
+              <SortedList>
+                <SortedElement
+                  onClick={() => setSelected('od najnowszego')}
+                  tabIndex={0}
+                >
+                  od najnowszego
+                </SortedElement>
+                <SortedElement
+                  tabIndex={0}
+                  onClick={() => setSelected('od najstraszego')}
+                >
+                  od najstarszego
+                </SortedElement>
+              </SortedList>
+            </SortContainer>
           </FlexEndWrapper>
           <BlogGrid>
             {[...Array(12).keys()].map((_, i: number) => (

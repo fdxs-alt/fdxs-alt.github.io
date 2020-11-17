@@ -4,7 +4,7 @@ import {
   CoffeContainer,
   InnerCoffeeContent,
   CoffeIconsContainer,
-} from '../styles/ExamplePost';
+} from '../styles/Blog/ExamplePost';
 import { Bold, IconContainer } from '../styles/Main';
 import CoffeeCup from '../../images/icons/coffee-cup.svg';
 import DoubleCoffeeCup from '../../images/icons/coffee-double.svg';

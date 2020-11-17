@@ -1,6 +1,9 @@
 import path from 'path';
 
 export default {
+  siteMetadata: {
+    siteUrl: 'https://gladiators.netlify.app/',
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -9,6 +12,8 @@ export default {
         path: path.join(__dirname, `images`, 'png'),
       },
     },
+    'gatsby-plugin-robots-txt',
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-typescript',

@@ -5,7 +5,7 @@ import {
   PointerArrows,
   PrevPostContent,
   NextPostContent,
-} from '../styles/ExamplePost';
+} from '../styles/Blog/ExamplePost';
 
 const Arrow = () => {
   const { ref, inView } = useInView({ triggerOnce: true });

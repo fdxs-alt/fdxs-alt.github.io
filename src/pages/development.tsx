@@ -1,27 +1,8 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import React from 'react';
+import { CenteredWrapper, GoBackLink, Container } from '../styles/Dev/Dev';
 import { HeaderSmall } from '../styles/BasicComponents';
-import styled from 'styled-components';
-
-const CenteredWrapper = styled.div`
-  width: 100%;
-  height: 95vh;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-`;
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const GoBackLink = styled(Link)`
-  font-weight: 700;
-  font-size: 20px;
-`;
 
 const development = () => {
   return (
