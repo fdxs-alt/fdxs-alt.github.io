@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://gladiators.netlify.app/sitemap.xml
-Host: https://gladiators.netlify.app
+Sitemap: https://fdxs-alt.github.io/sitemap.xml
+Host: https://fdxs-alt.github.io
