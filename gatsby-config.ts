@@ -2,7 +2,7 @@ import path from 'path';
 
 export default {
   siteMetadata: {
-    siteUrl: 'https://gladiators.netlify.app/',
+    siteUrl: 'https://fdxs-alt.github.io/',
   },
   plugins: [
     {
